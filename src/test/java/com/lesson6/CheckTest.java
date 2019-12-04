@@ -15,7 +15,7 @@ public class CheckTest {
     private Product product3;
     private Product product4;
     private ShopOne shopOne;
-    private Check check = new Check();
+    private Check check;
     private List<Integer> listTest = new ArrayList<>();
 
 

@@ -5,7 +5,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -17,11 +19,13 @@ public class ShopOneTest {
     private Product product3;
     private Product product4;
     private ShopOne shopOne;
-    private Check check = new Check();
-    private List<Integer> listTest = new ArrayList<>();
+    private Check check;
+    private List<Integer> listTest;
 
     @Before
     public void init() {
+        listTest = new ArrayList<>();
+        check = new Check();
         shopOne = new ShopOne();
         product1 = new Mouse(0001, "ScorpionG920", 70);
         product2 = new Keyboard(1010, "Razen", 156);
@@ -34,28 +38,45 @@ public class ShopOneTest {
         shopOne.addProductShop(product4);
 
 
+
         listTest.add(0001);
         listTest.add(1010);
         listTest.add(1230);
         listTest.add(2244);
     }
 
+    @Test
+    public void testInCheckAddProductNotNull(){
+        Product monitor = null;
+        check.addProductInCheck(monitor);
+        Assert.assertEquals(0, check.getSum(), 0);
+    }
 
     @Test
-    public void testAddingItems() {
+    public void testAddDuplicateToShop(){
         shopOne.addProductShop(product1);
         shopOne.addProductShop(product2);
         shopOne.addProductShop(product3);
         shopOne.addProductShop(product4);
-        assertTrue(shopOne.getProductList().contains(product3));
+        Assert.assertTrue(shopOne.getProductList().size() == 4);
     }
 
     @Test
-    public void testThisClassProduct() {
-        Assert.assertTrue(product1 instanceof Product);
-        Assert.assertTrue(product3 instanceof Product);
-        Assert.assertTrue(product2 instanceof Product);
+    public void testAddDuplicatesToCheck(){
+        check.addProductInCheck(product1);
+        check.addProductInCheck(product1);
+        check.addProductInCheck(product1);
+        check.addProductInCheck(product1);
+        Assert.assertEquals(280, check.getSum(), 0);
+    }
 
+    @Test
+    public void testAddingProduct() {
+        shopOne.addProductShop(product1);
+        shopOne.addProductShop(product2);
+        shopOne.addProductShop(product3);
+        shopOne.addProductShop(product4);
+        assertTrue(shopOne.getProductList().contains(product2));
     }
 
     @Test
@@ -65,17 +86,14 @@ public class ShopOneTest {
     }
 
     @Test
-    public void testAddCheck() {
-        check.addProductInCheck(product3);
-        Assert.assertEquals(180, check.getSum(), 0);
+    public void testAddListIDNullToTheShop() {
+        List<Integer> listTest = null;
+        Assert.assertNotNull(shopOne.getCheck(listTest));
     }
 
     @Test
-    public void testAddNullProductToTheCheck() {
-        Product monitor = null;
-        check.addProductInCheck(monitor);
-        Assert.assertEquals(0, check.getSum(), 0);
+    public  void testNullItemsLeftInStore(){
+        shopOne.getCheck(listTest);
+        Assert.assertFalse(shopOne.getProductList().size() == 0);
     }
-
-
 }

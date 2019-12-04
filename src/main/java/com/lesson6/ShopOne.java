@@ -13,15 +13,15 @@ public class ShopOne implements ShopInterface  {
 
     public void addProductShop(List<Product> list){
         for (int i = 0; i < list.size(); i++) {
-            addProductShop(list.get(i));
+            productList.add(list.get(i));
         }
     }
 
     public Check getCheck(List<Integer> list) {
-        if (list == null) {
-            return null;
-        }
         Check check = new Check();
+        if (list == null) {
+            return check;
+        }
         for (int i = 0; i < productList.size(); i++) {
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(j) == productList.get(i).getId()) {

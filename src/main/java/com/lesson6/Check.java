@@ -5,12 +5,7 @@ import java.util.Map;
 
 public class Check {
     private Map<Product, Integer> mapCheak = new HashMap<>();
-
-    public int getSum() {
-        return sum;
-    }
-
-    private int sum = 0;
+    private double sum = 0;
 
     public void generateCheck() {
         System.out.println(" Check");
@@ -23,7 +18,9 @@ public class Check {
     }
 
     public void addProductInCheck(Product product) {
-        if (product==null) return;
+        if (product == null) {
+            return;
+        }
         if (!mapCheak.containsKey(product)) {
             mapCheak.put(product, 1);
             sum += product.getPrice();
@@ -33,9 +30,12 @@ public class Check {
         }
     }
 
+    public double getSum() {
+        return sum;
+    }
+
     public Map<Product, Integer> getMapCheak() {
         return mapCheak;
     }
-
 
 }

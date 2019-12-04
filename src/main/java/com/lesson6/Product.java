@@ -26,17 +26,10 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id" + id +
-                ", name'" + name + '\'' +
-                ", price" + price +
+                "id:" + id +
+                ", name:'" + name + '\'' +
+                ", price:" + price +
                 '}';
-    }
-
-    public String toJSON(){
-        return "{\n\"type\":\""+this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1)+"\""+"," +
-                "\n\"id\":" + id +
-                ",\n\"name\":\"" + name + "\"" +
-                ",\n\"price\":" + price + "\n}";
     }
 
     @Override

@@ -5,11 +5,6 @@ import java.util.*;
 public class ShopTwo implements ShopInterface {
     private Map<Product, Integer> mapProduct = new HashMap<>();
     private Map<Integer, Product> mapIdToProduct = new HashMap<>();
-    Check check = new Check();
-
-    public Map<Product, Integer> getMapProduct() {
-        return mapProduct;
-    }
 
     public void addProductShop(List<Product> list){
         for (int i = 0; i < list.size(); i++) {
@@ -29,11 +24,20 @@ public class ShopTwo implements ShopInterface {
         mapIdToProduct.put(product.getId(), product);
     }
 
+    public Check getCheck(Product product){
+        Check check = new Check();
+        if (product == null) {
+            return check;
+        }
+            addToCheck(product.getId(), check);
+        return check;
+    }
+
     public Check getCheck(List<Integer> list){
+        Check check = new Check();
         if (list == null) {
             return check;
         }
-
         for (int i = 0; i < list.size(); i++) {
             addToCheck(list.get(i), check);
         }
@@ -60,5 +64,9 @@ public class ShopTwo implements ShopInterface {
 
     public Product getProduct(int idProduct){
         return mapIdToProduct.get(idProduct);
+    }
+
+    public Map<Product, Integer> getMapProduct() {
+        return mapProduct;
     }
 }
