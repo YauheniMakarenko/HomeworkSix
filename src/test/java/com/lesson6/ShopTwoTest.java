@@ -55,7 +55,7 @@ public class ShopTwoTest {
         shopTwo.addProductShop(product4);
         shopTwo.addProductShop(product4);
         shopTwo.addProductShop(product4);
-        Assert.assertTrue(shopTwo.getMapProduct().containsValue(5));
+        Assert.assertTrue(shopTwo.getCountProduct(product4) == 5);
 
     }
 

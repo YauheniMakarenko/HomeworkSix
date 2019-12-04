@@ -66,6 +66,15 @@ public class ShopTwo implements ShopInterface {
         return mapIdToProduct.get(idProduct);
     }
 
+    public int getCountProduct(Product product){
+        for (Map.Entry<Product, Integer> entry : mapProduct.entrySet()) {
+            if (entry.getKey().equals(product)) {
+                return entry.getValue();
+            }
+        }
+        return 0;
+    }
+
     public Map<Product, Integer> getMapProduct() {
         return mapProduct;
     }

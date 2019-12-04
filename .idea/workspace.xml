@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c512bf3-4095-4591-9859-aaeabebd0191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopTwoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopTwo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShopTwoTest.testСheckWorkWithEmptyStore">
+  <component name="RunManager" selected="JUnit.ShopTwoTest.testAddDuplicatesToShop">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lesson6.Main" />
       <module name="HomeworkSix" />
@@ -54,22 +53,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShopOneTest.testAddDuplicatesToCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeworkSix" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lesson6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lesson6" />
-      <option name="MAIN_CLASS_NAME" value="com.lesson6.ShopOneTest" />
-      <option name="METHOD_NAME" value="testAddDuplicatesToCheck" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,6 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopTwoTest.testAddDuplicatesToShop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeworkSix" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lesson6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lesson6" />
+      <option name="MAIN_CLASS_NAME" value="com.lesson6.ShopTwoTest" />
+      <option name="METHOD_NAME" value="testAddDuplicatesToShop" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShopTwoTest.testСheckWorkWithEmptyStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeworkSix" />
       <extension name="coverage">
@@ -124,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShopTwoTest.testAddDuplicatesToShop" />
         <item itemvalue="JUnit.ShopTwoTest.testСheckWorkWithEmptyStore" />
         <item itemvalue="JUnit.ShopOneTest.testСheckWorkWithEmptyStore" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ShopOneTest.testAddListIDNullToTheShop" />
-        <item itemvalue="JUnit.ShopOneTest.testAddDuplicatesToCheck" />
       </list>
     </recent_temporary>
   </component>
