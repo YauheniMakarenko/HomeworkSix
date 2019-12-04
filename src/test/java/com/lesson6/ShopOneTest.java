@@ -96,4 +96,11 @@ public class ShopOneTest {
         shopOne.getCheck(listTest);
         Assert.assertFalse(shopOne.getProductList().size() == 0);
     }
+
+    @Test
+    public  void testСheckWorkWithEmptyStore(){
+        ShopOne shopOne1 = new ShopOne();
+        shopOne1.getCheck(listTest);
+        Assert.assertEquals(0, check.getSum(), 0);
+    }
 }
