@@ -3,7 +3,37 @@
   <component name="ChangeListManager">
     <list default="true" id="0c512bf3-4095-4591-9859-aaeabebd0191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/CsvFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/CsvFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/Keyboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/Monitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ProductFileReadJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ProductFileReadJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ProductFileWriteJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ProductFileWriteJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ShopInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ShopOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson6/ShopTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ShopTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lesson6/CheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lesson6/CheckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lesson6/ShopTwoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/Check.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/CsvFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/Keyboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/Monitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/Mouse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/ProductFileReadJSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/ProductFileWriteJSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/ShopInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/ShopOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson6/ShopTwo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lesson6/CheckTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lesson6/CheckTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopOneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopOneTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopTwoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopTwoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -23,9 +54,15 @@
   </component>
   <component name="ProjectId" id="1UIUX1nEYEEYfmLD9Kobq7xIFD7" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/lesson6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HomeworkOne" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\main\java\com\lesson\HomeworkEight" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lesson.HomeworkEight" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\main\java\com\lesson6" />
       <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\test\java\com\lesson6" />
@@ -43,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShopTwoTest.testAddDuplicatesToShop">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lesson6.Main" />
       <module name="HomeworkSix" />
@@ -57,18 +94,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopOneTest.testAddListIDNullToTheShop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lesson.HomeworkEight.Main" />
       <module name="HomeworkSix" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lesson6.*" />
+          <option name="PATTERN" value="com.lesson.HomeworkEight.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.lesson6" />
-      <option name="MAIN_CLASS_NAME" value="com.lesson6.ShopOneTest" />
-      <option name="METHOD_NAME" value="testAddListIDNullToTheShop" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.ShopTwoTest.testAddDuplicatesToShop" />
         <item itemvalue="JUnit.ShopTwoTest.testСheckWorkWithEmptyStore" />
         <item itemvalue="JUnit.ShopOneTest.testСheckWorkWithEmptyStore" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ShopOneTest.testAddListIDNullToTheShop" />
       </list>
     </recent_temporary>
   </component>

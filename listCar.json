@@ -1,0 +1,67 @@
+[
+  {
+    "producer": "NISSAN",
+    "model": "GT-R",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "REAR",
+    "price": 32000,
+    "year": 1995,
+    "mileAge": 1000000,
+    "maxSpeed": 300,
+    "fuelConsumption": 20.0,
+    "weight": 1000,
+    "automaticTransmission": true
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "CLS-63-AMG",
+    "bodyType": "COUPE",
+    "typeOfDrive": "FULL",
+    "price": 110000,
+    "year": 2019,
+    "mileAge": 0,
+    "maxSpeed": 250,
+    "fuelConsumption": 15.0,
+    "weight": 1500,
+    "automaticTransmission": true
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "CLS-63-AMG",
+    "bodyType": "COUPE",
+    "typeOfDrive": "FULL",
+    "price": 110000,
+    "year": 2019,
+    "mileAge": 0,
+    "maxSpeed": 250,
+    "fuelConsumption": 15.0,
+    "weight": 1500,
+    "automaticTransmission": true
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "AMG-G63",
+    "bodyType": "SUV",
+    "typeOfDrive": "FULL",
+    "price": 120000,
+    "year": 2019,
+    "mileAge": 0,
+    "maxSpeed": 250,
+    "fuelConsumption": 13.0,
+    "weight": 2500,
+    "automaticTransmission": true
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "Maybach S 650 Guard",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FULL",
+    "price": 1000000,
+    "year": 2019,
+    "mileAge": 0,
+    "maxSpeed": 190,
+    "fuelConsumption": 8.7,
+    "weight": 2000,
+    "automaticTransmission": true
+  }
+]
