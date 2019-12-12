@@ -39,6 +39,7 @@ public enum Producer {
     PORSCHE,
     RENAULT,
     ROLLSROYCE,
+    SKODA,
     SUBARU,
     SUZUKI,
     TESLA,

@@ -5,28 +5,24 @@ import java.util.Objects;
 public class Car {
     private Producer producer;
     private String model;
+    private CarClass carСlass;
     private BodyType bodyType;
     private TypeOfDrive typeOfDrive;
     private int price;
     private int year;
-    private int mileAge;
     private int maxSpeed;
     private double fuelConsumption;
-    private int weight;
-    private boolean automaticTransmission;
 
-    public Car(Producer producer, String model, BodyType bodyType, TypeOfDrive typeOfDrive, int price, int year, int mileAge, int maxSpeed, double fuelConsumption, int weight, boolean automaticTransmission) {
+    public Car(Producer producer, String model, CarClass carClass, BodyType bodyType, TypeOfDrive typeOfDrive, int price, int year,int maxSpeed, double fuelConsumption) {
         this.producer = producer;
         this.model = model;
+        this.carСlass = carClass;
         this.bodyType = bodyType;
         this.typeOfDrive = typeOfDrive;
         this.price = price;
         this.year = year;
-        this.mileAge = mileAge;
         this.maxSpeed = maxSpeed;
         this.fuelConsumption = fuelConsumption;
-        this.weight = weight;
-        this.automaticTransmission = automaticTransmission;
     }
 
 
@@ -42,6 +38,10 @@ public class Car {
         return model;
     }
 
+    public CarClass getCarСlass() {
+        return carСlass;
+    }
+
     public TypeOfDrive getTypeOfDrive() {
         return typeOfDrive;
     }
@@ -54,10 +54,6 @@ public class Car {
         return year;
     }
 
-    public int getMileAge() {
-        return mileAge;
-    }
-
     public int getMaxSpeed() {
         return maxSpeed;
     }
@@ -66,28 +62,18 @@ public class Car {
         return fuelConsumption;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
-    public boolean isAutomaticTransmission() {
-        return automaticTransmission;
-    }
-
     @Override
     public String toString() {
         return "Car{" +
                 "producer=" + producer +
                 ", model='" + model + '\'' +
+                ", carСlass=" + carСlass +
                 ", bodyType=" + bodyType +
                 ", typeOfDrive=" + typeOfDrive +
                 ", price=" + price +
                 ", year=" + year +
-                ", mileAge=" + mileAge +
                 ", maxSpeed=" + maxSpeed +
                 ", fuelConsumption=" + fuelConsumption +
-                ", weight=" + weight +
-                ", automaticTransmission=" + automaticTransmission +
                 '}';
     }
 
@@ -98,19 +84,17 @@ public class Car {
         Car car = (Car) o;
         return price == car.price &&
                 year == car.year &&
-                mileAge == car.mileAge &&
                 maxSpeed == car.maxSpeed &&
                 Double.compare(car.fuelConsumption, fuelConsumption) == 0 &&
-                weight == car.weight &&
-                automaticTransmission == car.automaticTransmission &&
                 producer == car.producer &&
                 Objects.equals(model, car.model) &&
+                carСlass == car.carСlass &&
                 bodyType == car.bodyType &&
                 typeOfDrive == car.typeOfDrive;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(producer, model, bodyType, typeOfDrive, price, year, mileAge, maxSpeed, fuelConsumption, weight, automaticTransmission);
+        return Objects.hash(producer, model, carСlass, bodyType, typeOfDrive, price, year, maxSpeed, fuelConsumption);
     }
 }

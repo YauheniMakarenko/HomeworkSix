@@ -64,14 +64,12 @@ public class ProductFileWriteJSON {
     public String toJSON(Car car) {
         return "{\n\"producer\":\"" + car.getProducer() + "\"" +
                 ",\n\"model\":\"" + car.getModel() + "\"" +
+                ",\n\"CarClass\":\"" + car.getCarСlass() + "\"" +
                 ",\n\"bodyType\":\"" + car.getBodyType() + "\"" +
                 ",\n\"typeOfDrive\":\"" + car.getTypeOfDrive() + "\"" +
                 ",\n\"price\":" + car.getPrice() +
                 ",\n\"year\":" + car.getYear() +
-                ",\n\"mileAge\":" + car.getMileAge() +
                 ",\n\"maxSpeed\":" + car.getMaxSpeed() +
-                ",\n\"fuelConsumption\":" + car.getFuelConsumption() +
-                ",\n\"weight\":" + car.getWeight() +
-                ",\n\"automaticTransmission\":" + car.isAutomaticTransmission() + "\n}";
+                ",\n\"fuelConsumption\":" + car.getFuelConsumption() + "\n}";
     }
 }

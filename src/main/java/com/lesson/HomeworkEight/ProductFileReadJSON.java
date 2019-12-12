@@ -34,19 +34,15 @@ public class ProductFileReadJSON {
         String[] split6 = pairs[6].split(":");
         String[] split7 = pairs[7].split(":");
         String[] split8 = pairs[8].split(":");
-        String[] split9 = pairs[9].split(":");
-        String[] split10 = pairs[10].split(":");
         Car car = new Car(Producer.valueOf(split0[1]),
                 split1[1],
-                BodyType.valueOf(split2[1]),
-                TypeOfDrive.valueOf(split3[1]),
-                Integer.parseInt(split4[1]),
+                CarClass.valueOf(split2[1]),
+                BodyType.valueOf(split3[1]),
+                TypeOfDrive.valueOf(split4[1]),
                 Integer.parseInt(split5[1]),
                 Integer.parseInt(split6[1]),
                 Integer.parseInt(split7[1]),
-                Double.parseDouble(split8[1]),
-                Integer.parseInt(split9[1]),
-                Boolean.parseBoolean(split10[1]));
+                Double.parseDouble(split8[1]));
         return car;
     }
 
