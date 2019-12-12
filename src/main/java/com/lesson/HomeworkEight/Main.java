@@ -9,7 +9,12 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
+        new Menu().start();
+    }
+
+    public List add(){
         List<Car> listCar = new ArrayList<>();
         listCar.add(new Car(Producer.NISSAN, "GT-R", CarClass.S, BodyType.SEDAN, TypeOfDrive.REAR, 32000, 1995,300, 20));
         listCar.add(new Car(Producer.MERCEDESBENZ, "CLS-63-AMG", CarClass.D, BodyType.COUPE, TypeOfDrive.FULL, 110000, 2019,250, 15));
@@ -23,8 +28,7 @@ public class Main {
         listCar.add(new Car(Producer.FORD, "Focus", CarClass.C, BodyType.SEDAN, TypeOfDrive.FRONT, 9200, 2011, 195, 8.3));
         listCar.add(new Car(Producer.TOYOTA, "Camry", CarClass.E, BodyType.SEDAN, TypeOfDrive.FULL, 18000, 2016, 210, 9.7));
         listCar.add(new Car(Producer.SKODA, "Octavia", CarClass.C, BodyType.HATCHBACK, TypeOfDrive.FULL, 35000, 2019, 230, 5));
-
-        new Menu().start();
+        return listCar;
     }
 }
 
@@ -72,6 +76,9 @@ class Menu {
                         } catch (Exception e) {
                             e.getStackTrace();
                             System.out.println("Ошибка! Данного файла не обнаружено!");
+                            System.out.println("Данные загружены из Main");
+                            Main main = new Main();
+                            taxiPark.addCar(main.add());
                         }
                         break;
                     case 2:

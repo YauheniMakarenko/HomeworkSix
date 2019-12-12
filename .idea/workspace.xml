@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0c512bf3-4095-4591-9859-aaeabebd0191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listCar.json" beforeDir="false" afterPath="$PROJECT_DIR$/listCar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/ProductFileReadJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/ProductFileReadJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/ProductFileWriteJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/ProductFileWriteJSON.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/TaxiPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/TaxiPark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
