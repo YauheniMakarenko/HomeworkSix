@@ -57,7 +57,7 @@ public class TaxiPark {
                 return o1.getKey().getPrice() - o2.getKey().getPrice();
             }
         });
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println(list.get(i));
         }
     }
@@ -70,7 +70,7 @@ public class TaxiPark {
                 return o1.getKey().getMaxSpeed() - o2.getKey().getMaxSpeed();
             }
         });
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println(list.get(i));
         }
     }

@@ -1,4 +1,10 @@
-package com.lesson.HomeworkEight;
+package com.lesson.HomeworkEight.File;
+
+import com.lesson.HomeworkEight.*;
+import com.lesson.HomeworkEight.Enum.BodyType;
+import com.lesson.HomeworkEight.Enum.CarClass;
+import com.lesson.HomeworkEight.Enum.Producer;
+import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductFileReadJSON {
+public class ReadJSON {
 
     private List<Car> createProducts(String productsString) {
         String[] split = productsString.split("},\\{");

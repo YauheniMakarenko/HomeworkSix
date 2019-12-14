@@ -1,4 +1,4 @@
-package com.lesson.HomeworkEight;
+package com.lesson.HomeworkEight.Enum;
 
 public enum Producer {
     ACURA,

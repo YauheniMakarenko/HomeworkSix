@@ -1,12 +1,13 @@
-package com.lesson.HomeworkEight;
+package com.lesson.HomeworkEight.File;
 
+import com.lesson.HomeworkEight.Car;
 import com.lesson.HomeworkSeven.Product;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductFileWriteJSON {
+public class WriteJSON {
 
     public void addProductInFile(Car car, String fileName) throws IOException {
         List<String> listProduct = new ArrayList<>();

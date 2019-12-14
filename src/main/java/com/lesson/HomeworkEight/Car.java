@@ -1,5 +1,10 @@
 package com.lesson.HomeworkEight;
 
+import com.lesson.HomeworkEight.Enum.BodyType;
+import com.lesson.HomeworkEight.Enum.CarClass;
+import com.lesson.HomeworkEight.Enum.Producer;
+import com.lesson.HomeworkEight.Enum.TypeOfDrive;
+
 import java.util.Objects;
 
 public class Car {
