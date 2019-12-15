@@ -7,6 +7,7 @@ import com.lesson.HomeworkEight.Enum.Producer;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -52,18 +53,22 @@ public class ReadJSON {
         return car;
     }
 
-    public List<Car> createLispProductFile(String fileName) throws IOException {
+    public List<Car> createLispProductFile(String fileName) {
 
         String accumulator = "";
-        FileReader fileReader = new FileReader(fileName);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String string = "";
-        while (string != null) {
-            string = bufferedReader.readLine();
-            if (string == null) break;
-            accumulator += string;
+        try(FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader)){
+            String string = "";
+            while (string != null) {
+                string = bufferedReader.readLine();
+                if (string == null) break;
+                accumulator += string;
+            }
+        }catch (FileNotFoundException e) {
+            e.getStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
 
         accumulator = accumulator.replace("[", "");
         accumulator = accumulator.replace("]", "");

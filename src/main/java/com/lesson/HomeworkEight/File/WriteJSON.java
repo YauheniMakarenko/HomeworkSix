@@ -9,7 +9,7 @@ import java.util.List;
 
 public class WriteJSON {
 
-    public void addProductInFile(Car car, String fileName) throws IOException {
+    public void addProductInFile(Car car, String fileName) {
         List<String> listProduct = new ArrayList<>();
         if ((listProduct.size() == 0 && (overwriteExistingProducts(fileName).length() == 0))) {
             listProduct.add("[\n");
@@ -24,22 +24,26 @@ public class WriteJSON {
 
     }
 
-    public void addProductInFile(List<Car> car, String fileName) throws IOException {
+    public void addProductInFile(List<Car> car, String fileName){
         for (int i = 0; i < car.size(); i++) {
             addProductInFile(car.get(i), fileName);
         }
     }
 
-    private void fileWrite(List<String> listProduct, String fileName) throws IOException {
+    private void fileWrite(List<String> listProduct, String fileName){
         String string = overwriteExistingProducts(fileName);
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName));
-        if (string != null) {
-            bufferedWriter.write(string);
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
+            if (string != null) {
+                bufferedWriter.write(string);
+            }
+            for (int i = 0; i < listProduct.size(); i++) {
+                bufferedWriter.append(listProduct.get(i));
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
         }
-        for (int i = 0; i < listProduct.size(); i++) {
-            bufferedWriter.append(listProduct.get(i));
-        }
-        bufferedWriter.close();
+
+
     }
 
     private String overwriteExistingProducts(String fileName) {

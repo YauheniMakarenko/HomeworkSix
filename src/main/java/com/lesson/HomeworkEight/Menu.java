@@ -2,10 +2,20 @@ package com.lesson.HomeworkEight;
 
 import com.lesson.HomeworkEight.File.ReadJSON;
 
-import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Menu {
+
+    public static final int firstAction = 1;
+    public static final int secondAction = 2;
+    public static final int thirdAction = 3;
+    public static final int fourthAction = 4;
+    public static final int fifthAction = 5;
+    public static final int isExit = 6;
+
     private void printMainMenu() {
         System.out.println();
         System.out.println("1. Создать таксопарк");
@@ -29,62 +39,61 @@ public class Menu {
     }
 
 
-    public void start() throws IOException {
+    public void start() {
         TaxiPark taxiPark = new TaxiPark();
         Scanner scanner = new Scanner(System.in);
-        if (scanner != null) {
-            int key;
-            do {
-                printMainMenu();
-                System.out.print("Введите номер меню: ");
-                key = scanner.nextInt();
-                switch (key) {
-                    case 1:
-                        System.out.println("Введите название файла!");
-                        String select = scanner.next();
-                        try {
-                            ReadJSON productFileReadJSON = new ReadJSON();
-                            taxiPark.addCar(productFileReadJSON.createLispProductFile(select));
-                        } catch (Exception e) {
-                            e.getStackTrace();
-                            System.out.println("Ошибка! Данного файла не обнаружено!");
-                            System.out.println("Данные загружены из Main");
-                            Main main = new Main();
-                            taxiPark.addCar(main.add());
-                        }
-                        break;
-                    case 2:
-                        System.out.println("Выберите критерий!");
-                        printTopMenu();
-                        key = scanner.nextInt();
-                        if (key == 1) taxiPark.topByPrice();
-                        else if (key == 2) taxiPark.topByMaxSpeed();
-                        else System.out.println("Вы ввели неверно значение меню");
-                        break;
-                    case 3:
-                        taxiPark.sort();
-                        break;
-                    case 4:
-                        System.out.println("Выберите критерий поиска!");
-                        printSearchMenu();
-                        key = scanner.nextInt();
-                        if (key == 1) taxiPark.searchByPrice();
-                        else if (key == 2) taxiPark.searchByYearOfManufacture();
-                        else if (key == 3) taxiPark.searchByProduccer();
-                        else if (key == 4) taxiPark.searchByTwoParameters();
-                        else System.out.println("Вы ввели неверно значение меню");
-                        break;
-                    case 5:
-                        System.out.println("Список всех автомобилей");
-                        taxiPark.print();
-                        break;
-                    case 6:
-                        System.out.println("Завершение программы...");
-                        break;
-                    default:
-                        System.out.println("Вы ввели неверное значение меню...\n");
-                }
-            } while (key != 6);
-        }
+        int key;
+        do {
+            printMainMenu();
+            System.out.print("Введите номер меню: ");
+            key = scanner.nextInt();
+            switch (key) {
+                case firstAction:
+                    System.out.println("Введите название файла!");
+                    String select = scanner.next();
+                    try {
+                        ReadJSON productFileReadJSON = new ReadJSON();
+                        taxiPark.addCar(productFileReadJSON.createLispProductFile(select));
+                    } catch (Exception e) {
+                        e.getStackTrace();
+                        System.out.println("Ошибка! Данного файла не обнаружено!");
+                        System.out.println("Данные загружены из Main");
+                        Main main = new Main();
+                        taxiPark.addCar(main.add());
+                    }
+                    break;
+                case secondAction:
+                    System.out.println("Выберите критерий!");
+                    printTopMenu();
+                    key = scanner.nextInt();
+                    if (key == firstAction) taxiPark.topByPrice();
+                    else if (key == secondAction) taxiPark.topByMaxSpeed();
+                    else System.out.println("Вы ввели неверно значение меню");
+                    break;
+                case thirdAction:
+                    taxiPark.sort();
+                    break;
+                case fourthAction:
+                    System.out.println("Выберите критерий поиска!");
+                    printSearchMenu();
+                    key = scanner.nextInt();
+                    if (key == firstAction) taxiPark.searchByPrice();
+                    else if (key == secondAction) taxiPark.searchByYearOfManufacture();
+                    else if (key == thirdAction) taxiPark.searchByProduccer();
+                    else if (key == fourthAction) taxiPark.searchByTwoParameters();
+                    else System.out.println("Вы ввели неверно значение меню");
+                    break;
+                case fifthAction:
+                    System.out.println("Список всех автомобилей");
+                    taxiPark.print();
+                    break;
+                case isExit:
+                    System.out.println("Завершение программы...");
+                    break;
+                default:
+                    System.out.println("Вы ввели неверное значение меню...\n");
+            }
+        } while (key != isExit);
+
     }
 }

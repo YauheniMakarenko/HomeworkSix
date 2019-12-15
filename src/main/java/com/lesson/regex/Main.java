@@ -7,10 +7,10 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         wordsInLetter("t");
-        /*sentencesFromTheWord();
+        sentencesFromTheWord();
         numberCheck();
         dateSearch();
-        siteSearch();*/
+        siteSearch();
 
     }
 
@@ -49,7 +49,7 @@ public class Main {
     public static void numberCheck() {
         String[] s = {"+375291233214", "375331233212", "+375(25)4321232", "+375(29) 123-32-12", "+375(29) 123 32 13"};
 
-        Pattern pattern = Pattern.compile("[+-]?375\\(?(29|33|25)\\)?.+");
+        Pattern pattern = Pattern.compile("\\+?375\\(?(29|33|25)\\)?.+");
         for (int i = 0; i < s.length; i++) {
             Matcher matcher = pattern.matcher(s[i]);
             if (matcher.find()) {

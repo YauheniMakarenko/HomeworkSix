@@ -3,7 +3,46 @@
   <component name="ChangeListManager">
     <list default="true" id="0c512bf3-4095-4591-9859-aaeabebd0191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/File/ReadJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/File/ReadJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/File/WriteJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/File/WriteJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/FreightСar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/PassengerСar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/TaxiPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/TaxiPark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ProductFileReadJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkSeven/ProductFileReadJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/regex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/regex/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/CompareCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/CompareCar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/BodyType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/BodyType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/CarClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/CarClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/Producer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/TypeOfDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Enum/TypeOfDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/File/ReadJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/File/ReadJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/File/WriteJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/File/WriteJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/FreightСar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/PassengerСar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Check.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/CsvFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/CsvFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Keyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Keyboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Monitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Mouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Mouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ProductFileReadJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ProductFileReadJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ProductFileWriteJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ProductFileWriteJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ShopInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ShopInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ShopOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ShopOne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ShopTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkSeven/ShopTwo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/regex/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/regex/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lesson6/CheckTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lesson6/CheckTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopOneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopOneTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopTwoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lesson6/ShopTwoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +93,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lesson.regex.Main" />
       <module name="HomeworkSix" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lesson.regex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lesson.HomeworkEight.Main" />
+      <module name="HomeworkSix" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lesson.HomeworkEight.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,10 +138,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.ShopTwoTest.testAddDuplicatesToShop" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.ShopTwoTest.testAddDuplicatesToShop" />
       </list>
@@ -120,5 +174,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="reader.lock" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

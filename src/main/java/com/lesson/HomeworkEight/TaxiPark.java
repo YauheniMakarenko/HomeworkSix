@@ -2,6 +2,7 @@ package com.lesson.HomeworkEight;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 
@@ -75,17 +76,25 @@ public class TaxiPark {
         }
     }
 
-    public void searchByPrice() throws IOException {
+    private String reader() {
+        String string = "";
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            string = reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return string;
+    }
+
+    public void searchByPrice() {
         try {
             System.out.println("Введите минимальную цену:");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            double tmpMin = Double.parseDouble(reader.readLine());
+            int tmpMin = Integer.parseInt(reader());
             System.out.println("Введите максимальную цену:");
-            BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
-            double tmpMax = Double.parseDouble(reader1.readLine());
+            int tmpMax = Integer.parseInt(reader());
             if (tmpMax < tmpMin) {
                 System.out.println("Указанное значение меньше минимальной цены, укажите другую максимальную цену:");
-                tmpMax = Double.parseDouble(reader1.readLine());
+                tmpMax = Integer.parseInt(reader());
             }
             for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
                 if (map.getKey().getPrice() >= tmpMin && map.getKey().getPrice() <= tmpMax) {
@@ -95,18 +104,17 @@ public class TaxiPark {
         } catch (NumberFormatException e) {
             e.getStackTrace();
             System.out.println("Ошибка! Неверный формат ввода данных.");
-            searchByPrice();
+            //searchByPrice();
         }
     }
 
-    public void searchByYearOfManufacture() throws IOException {
+    public void searchByYearOfManufacture() {
         try {
             System.out.println("Введите год выпуска:");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            double tmp = Double.parseDouble(reader.readLine());
+            int tmp = Integer.parseInt(reader());
             if (tmp < 0) {
                 System.out.println("Указано отрицательное значение! Введите новое");
-                tmp = Double.parseDouble(reader.readLine());
+                tmp = Integer.parseInt(reader());
             }
             for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
                 if (map.getKey().getYear() == tmp) {
@@ -121,39 +129,30 @@ public class TaxiPark {
     }
 
     public void searchByProduccer() {
-        try {
-            System.out.println("Введите проиводителя:");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            String tmp = reader.readLine();
-            for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
-                if (map.getKey().getProducer().toString().equalsIgnoreCase(tmp)) {
-                    System.out.println(map.getKey() + ":" + map.getValue());
-                }
+        System.out.println("Введите проиводителя:");
+        String tmp = reader();
+        for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
+            if (map.getKey().getProducer().toString().equalsIgnoreCase(tmp)) {
+                System.out.println(map.getKey() + ":" + map.getValue());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
     }
 
     public void searchByTwoParameters() {
-        try {
-            System.out.println("Введите производителя:");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            String firstParameter = reader.readLine();
-            System.out.println("Введите класс авто: (A/S)");
-            System.out.println("A-микроавто, B-малые авто, С-средний, D-семейные, E-бизнес, F-представительские" +
-                    ", J-внедорожники, M-минивены, S-спорткар");
-            BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
-            String secondParameter = reader1.readLine();
-            for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
-                if (map.getKey().getProducer().toString().equalsIgnoreCase(firstParameter)
-                        && map.getKey().getCarСlass().toString().equalsIgnoreCase(secondParameter)) {
-                    System.out.println(map.getKey() + ":" + map.getValue());
-                }
+        System.out.println("Введите производителя:");
+        String firstParameter = reader();
+        System.out.println("Введите класс авто: (A/S)");
+        System.out.println("A-микроавто, B-малые авто, С-средний, D-семейные, E-бизнес, F-представительские" +
+                ", J-внедорожники, M-минивены, S-спорткар");
+        String secondParameter = reader();
+        for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
+            if (map.getKey().getProducer().toString().equalsIgnoreCase(firstParameter)
+                    && map.getKey().getCarСlass().toString().equalsIgnoreCase(secondParameter)) {
+                System.out.println(map.getKey() + ":" + map.getValue());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
 
     }
 

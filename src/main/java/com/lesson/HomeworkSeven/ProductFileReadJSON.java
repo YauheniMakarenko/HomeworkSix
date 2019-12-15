@@ -43,6 +43,7 @@ public class ProductFileReadJSON {
     public List<Product> createLispProductFile(String fileName) throws IOException {
 
         String accumulator = "";
+
         FileReader fileReader = new FileReader(fileName);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String string = "";
