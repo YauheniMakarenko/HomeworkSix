@@ -1,14 +1,16 @@
 package com.lesson.HomeworkEight;
 
+import com.lesson.HomeworkEight.StrategySearch.SearchStrategy;
+
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 
 public class TaxiPark {
-    private Map<Car, Integer> mapCar = new HashMap<>();
+    private static Map<Car, Integer> mapCar = new HashMap<>();
     private int sum = 0;
+    private SearchStrategy searchStrategy;
 
 
     public void addCar(Car car) {
@@ -38,7 +40,7 @@ public class TaxiPark {
         System.out.println("Сost of all cars: " + sum);
     }
 
-    public Map<Car, Integer> getMapCar() {
+    public static Map<Car, Integer> getMapCar() {
         return mapCar;
     }
 
@@ -76,84 +78,10 @@ public class TaxiPark {
         }
     }
 
-    private String reader() {
-        String string = "";
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            string = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return string;
+    public void search(SearchStrategy searchStrategy){
+        this.searchStrategy = searchStrategy;
+        searchStrategy.search();
     }
 
-    public void searchByPrice() {
-        try {
-            System.out.println("Введите минимальную цену:");
-            int tmpMin = Integer.parseInt(reader());
-            System.out.println("Введите максимальную цену:");
-            int tmpMax = Integer.parseInt(reader());
-            if (tmpMax < tmpMin) {
-                System.out.println("Указанное значение меньше минимальной цены, укажите другую максимальную цену:");
-                tmpMax = Integer.parseInt(reader());
-            }
-            for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
-                if (map.getKey().getPrice() >= tmpMin && map.getKey().getPrice() <= tmpMax) {
-                    System.out.println(map.getKey() + ":" + map.getValue());
-                }
-            }
-        } catch (NumberFormatException e) {
-            e.getStackTrace();
-            System.out.println("Ошибка! Неверный формат ввода данных.");
-            //searchByPrice();
-        }
-    }
-
-    public void searchByYearOfManufacture() {
-        try {
-            System.out.println("Введите год выпуска:");
-            int tmp = Integer.parseInt(reader());
-            if (tmp < 0) {
-                System.out.println("Указано отрицательное значение! Введите новое");
-                tmp = Integer.parseInt(reader());
-            }
-            for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
-                if (map.getKey().getYear() == tmp) {
-                    System.out.println(map.getKey() + ":" + map.getValue());
-                }
-            }
-        } catch (NumberFormatException e) {
-            e.getStackTrace();
-            System.out.println("Ошибка! Неверный формат ввода данных.");
-            searchByYearOfManufacture();
-        }
-    }
-
-    public void searchByProduccer() {
-        System.out.println("Введите проиводителя:");
-        String tmp = reader();
-        for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
-            if (map.getKey().getProducer().toString().equalsIgnoreCase(tmp)) {
-                System.out.println(map.getKey() + ":" + map.getValue());
-            }
-        }
-
-    }
-
-    public void searchByTwoParameters() {
-        System.out.println("Введите производителя:");
-        String firstParameter = reader();
-        System.out.println("Введите класс авто: (A/S)");
-        System.out.println("A-микроавто, B-малые авто, С-средний, D-семейные, E-бизнес, F-представительские" +
-                ", J-внедорожники, M-минивены, S-спорткар");
-        String secondParameter = reader();
-        for (Map.Entry<Car, Integer> map : mapCar.entrySet()) {
-            if (map.getKey().getProducer().toString().equalsIgnoreCase(firstParameter)
-                    && map.getKey().getCarСlass().toString().equalsIgnoreCase(secondParameter)) {
-                System.out.println(map.getKey() + ":" + map.getValue());
-            }
-        }
-
-
-    }
 
 }

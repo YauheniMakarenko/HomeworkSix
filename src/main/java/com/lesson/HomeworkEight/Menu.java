@@ -1,11 +1,12 @@
 package com.lesson.HomeworkEight;
 
 import com.lesson.HomeworkEight.File.ReadJSON;
+import com.lesson.HomeworkEight.StrategySearch.SearchByPrice;
+import com.lesson.HomeworkEight.StrategySearch.SearchByProduccer;
+import com.lesson.HomeworkEight.StrategySearch.SearchByTwoParamerts;
+import com.lesson.HomeworkEight.StrategySearch.SearchByYearOfManufacture;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Menu {
 
@@ -37,7 +38,6 @@ public class Menu {
         System.out.println("1. По цене");
         System.out.println("2. По максимальной скорости");
     }
-
 
     public void start() {
         TaxiPark taxiPark = new TaxiPark();
@@ -77,10 +77,10 @@ public class Menu {
                     System.out.println("Выберите критерий поиска!");
                     printSearchMenu();
                     key = scanner.nextInt();
-                    if (key == firstAction) taxiPark.searchByPrice();
-                    else if (key == secondAction) taxiPark.searchByYearOfManufacture();
-                    else if (key == thirdAction) taxiPark.searchByProduccer();
-                    else if (key == fourthAction) taxiPark.searchByTwoParameters();
+                    if (key == firstAction) taxiPark.search(new SearchByPrice());
+                    else if (key == secondAction) taxiPark.search(new SearchByYearOfManufacture());
+                    else if (key == thirdAction) taxiPark.search(new SearchByProduccer());
+                    else if (key == fourthAction) taxiPark.search(new SearchByTwoParamerts());
                     else System.out.println("Вы ввели неверно значение меню");
                     break;
                 case fifthAction:
@@ -94,6 +94,7 @@ public class Menu {
                     System.out.println("Вы ввели неверное значение меню...\n");
             }
         } while (key != isExit);
+
 
     }
 }
