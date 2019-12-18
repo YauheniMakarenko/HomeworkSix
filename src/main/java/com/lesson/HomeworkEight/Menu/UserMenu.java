@@ -20,7 +20,7 @@ public class UserMenu {
         System.out.println("5. Выход из приложения");
     }
 
-    private void action(ActionStrategyForUser actionStrategyForUser){
+    private void action(ActionStrategyForUser actionStrategyForUser) {
         this.actionStrategyForUser = actionStrategyForUser;
         actionStrategyForUser.action();
     }
@@ -30,21 +30,21 @@ public class UserMenu {
         AllActionStrategyForUser allActionStrategyForUser = new AllActionStrategyForUser();
         String keyString;
         int keyInt;
-        try{
+        try {
             do {
                 printMainMenu();
                 System.out.print("Введите номер меню: ");
                 keyString = scanner.next();
-                while (!new ValidatorForMenu().validate(keyString)){
+                while (!new ValidatorForMenu().validate(keyString)) {
                     System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
                     keyString = scanner.next();
                 }
                 keyInt = Integer.parseInt(keyString);
-                if (allActionStrategyForUser.getMap().containsKey(keyInt)){
+                if (allActionStrategyForUser.getMap().containsKey(keyInt)) {
                     action(allActionStrategyForUser.getMap().get(keyInt));
                 }
             } while (keyInt != isExit);
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             e.getMessage();
             System.out.println("Таксопарка не существует!");
         }
