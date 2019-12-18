@@ -14,7 +14,6 @@ public class Main {
         new MainMenu().start();
     }
 
-
     public List add() {
         List<Car> listCar = new ArrayList<>();
         listCar.add(new Car(Producer.NISSAN, "GT-R", CarClass.S, BodyType.SEDAN, TypeOfDrive.REAR, 32000, 1995, 300, 20));
