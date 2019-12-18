@@ -4,15 +4,14 @@ import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.Producer;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
-import com.lesson.HomeworkEight.File.ReadJSON;
+import com.lesson.HomeworkEight.Menu.MainMenu;
 
-import java.io.*;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        new Menu().start();
+        new MainMenu().start();
     }
 
     public List add() {

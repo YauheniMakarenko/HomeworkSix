@@ -1,13 +1,14 @@
 package com.lesson.HomeworkEight.StrategySearch;
 
 import com.lesson.HomeworkEight.Car;
+import com.lesson.HomeworkEight.Menu.Admin;
+import com.lesson.HomeworkEight.TaxiPark;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Map;
 
-import static com.lesson.HomeworkEight.TaxiPark.getMapCar;
 
 public class SearchByProduccer implements SearchStrategy {
 
@@ -24,9 +25,10 @@ public class SearchByProduccer implements SearchStrategy {
 
     @Override
     public void search() {
+        TaxiPark taxiPark = Admin.getTaxiPark();
         System.out.println("Введите проиводителя:");
         String tmp = reader();
-        for (Map.Entry<Car, Integer> map : getMapCar().entrySet()) {
+        for (Map.Entry<Car, Integer> map : taxiPark.getMapCar().entrySet()) {
             if (map.getKey().getProducer().toString().equalsIgnoreCase(tmp)) {
                 System.out.println(map.getKey() + ":" + map.getValue());
             }

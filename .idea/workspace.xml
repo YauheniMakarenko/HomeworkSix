@@ -4,13 +4,25 @@
     <list default="true" id="0c512bf3-4095-4591-9859-aaeabebd0191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/CompareCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/CompareCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Context.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/Menu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByProduccer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByProduccer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByTwoParamerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByTwoParamerts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByYearOfManufacture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchByYearOfManufacture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/StrategySearch/SearchStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/TaxiPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/HomeworkEight/TaxiPark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/CompareCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/CompareCar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByPrice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByProduccer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByProduccer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByTwoParamerts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByTwoParamerts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByYearOfManufacture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/StrategySearch/SearchByYearOfManufacture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lesson/HomeworkEight/TaxiPark.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,18 +48,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../HomeworkOne" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.lesson.HomeworkEight" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\main\java\com\lesson\HomeworkEight" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\main\java\com\lesson6" />
       <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\test\java\com\lesson6" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lesson.HomeworkEight.ActionStrategyForAdminMenu" />
       <recent name="com.lesson.HomeworkEight" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ola_t\IdeaProjects\HomeworkSix\src\main\java\com\lesson\HomeworkEight" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.lesson.HomeworkEight" />
     </key>
   </component>
   <component name="RunDashboard">
