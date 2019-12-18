@@ -6,7 +6,7 @@ import java.util.Map;
 public class AllSortStrategy {
     private Map<Integer, SortStrategy> mapSort;
 
-    public AllSortStrategy(){
+    public AllSortStrategy() {
         this.mapSort = new HashMap<>();
         mapSort.put(1, new SortTopByPrice());
         mapSort.put(2, new SortTopByMaxSpeed());

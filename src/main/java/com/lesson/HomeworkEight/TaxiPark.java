@@ -57,7 +57,7 @@ public class TaxiPark {
     }
 
 
-    public void search(SearchStrategy searchStrategy){
+    public void search(SearchStrategy searchStrategy) {
         this.searchStrategy = searchStrategy;
         searchStrategy.search();
     }
