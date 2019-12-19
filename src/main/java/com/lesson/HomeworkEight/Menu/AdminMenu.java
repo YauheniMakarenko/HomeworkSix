@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class AdminMenu {
     private static TaxiPark taxiPark = new TaxiPark();
-    private static final int isExit = 5;
+    private final int isExit = 5;
     ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
     private void printMainMenu() {

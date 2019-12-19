@@ -8,6 +8,7 @@ import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.File.ReadJSON;
 import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.Validators.ValidatorForFileName;
+import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +16,14 @@ import java.util.Scanner;
 
 public class ActionForAdminToCreateTaxiPark implements ActionStrategyForAdmin {
 
+    ValidatorForFileName validatorForFileName = new ValidatorForFileName();
+
     @Override
     public void action() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите название файла!");
         String select = scanner.next();
-        while (!new ValidatorForFileName().validate(select)) {
+        while (!validatorForFileName.validate(select)) {
             System.out.println("Имя файла некорректное, пожалуйста, введите имя файла например: \"car.json\": ");
             select = scanner.next();
         }

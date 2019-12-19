@@ -8,7 +8,7 @@ import java.util.*;
 public class UserMenu {
     ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
-    public static final int isExit = 5;
+    public final int isExit = 5;
 
     private void printMainMenu() {
         System.out.println();
