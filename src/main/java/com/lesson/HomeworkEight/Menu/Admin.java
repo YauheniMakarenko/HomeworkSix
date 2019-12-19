@@ -2,22 +2,15 @@ package com.lesson.HomeworkEight.Menu;
 
 import com.lesson.HomeworkEight.ActionStrategyForAdminMenu.ActionStrategyForAdmin;
 import com.lesson.HomeworkEight.ActionStrategyForAdminMenu.AllActionStrategyForAdmin;
-import com.lesson.HomeworkEight.ActionStrategyForUserMenu.ActionStrategyForUser;
-import com.lesson.HomeworkEight.ActionStrategyForUserMenu.AllActionStrategyForUser;
-import com.lesson.HomeworkEight.File.ReadJSON;
-import com.lesson.HomeworkEight.Main;
 import com.lesson.HomeworkEight.TaxiPark;
-import com.lesson.HomeworkEight.Validators.ValidatorForFileName;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class Admin {
     private static TaxiPark taxiPark;
-
     private ActionStrategyForAdmin actionStrategyForAdmin;
-    private static final int isExit = 3;
+    private static final int isExit = 5;
 
     public Admin(){
         this.taxiPark = new TaxiPark();
@@ -26,8 +19,10 @@ public class Admin {
     private void printMainMenu() {
         System.out.println();
         System.out.println("1. Создать таксопарк");
-        System.out.println("2. Войти как user");
-        System.out.println("3. Выход из приложения");
+        System.out.println("2. Вывести все автомобили");
+        System.out.println("3. Вывести все заказы");
+        System.out.println("4. Войти как user");
+        System.out.println("5. Выход из приложения");
     }
 
     private void action(ActionStrategyForAdmin actionStrategyForAdmin){

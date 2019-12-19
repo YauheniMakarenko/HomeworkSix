@@ -16,7 +16,7 @@ public class UserMenu {
         System.out.println("1. Топ 5 автомобилей");
         System.out.println("2. Отсортировать автомобили по расходу топлива");
         System.out.println("3. Поиск");
-        System.out.println("4. Вывести все автомобили");
+        System.out.println("4. Сделать заказ");
         System.out.println("5. Выход из приложения");
     }
 

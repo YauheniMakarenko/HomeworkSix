@@ -10,7 +10,9 @@ public class AllActionStrategyForAdmin {
         this.mapAdmin = new HashMap<>();
         mapAdmin.put(1, new FirstActionForAdmin());
         mapAdmin.put(2, new SecondActionForAdmin());
-        mapAdmin.put(3, new isExitActionForAdmin());
+        mapAdmin.put(3, new ThirdActionForAdmin());
+        mapAdmin.put(4, new FourthActionForAdmin());
+        mapAdmin.put(5, new isExitActionForAdmin());
     }
 
     public Map<Integer, ActionStrategyForAdmin> getMapAdmin() {

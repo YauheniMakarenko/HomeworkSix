@@ -2,18 +2,11 @@ package com.lesson.HomeworkEight.ActionStrategyForUserMenu;
 
 import com.lesson.HomeworkEight.Menu.Admin;
 import com.lesson.HomeworkEight.SortStrategy.AllSortStrategy;
-import com.lesson.HomeworkEight.SortStrategy.SortStrategy;
-import com.lesson.HomeworkEight.StrategySearch.AllSearchStrategies;
-import com.lesson.HomeworkEight.StrategySearch.SearchStrategy;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class FirstActionForUser implements ActionStrategyForUser {
-
-    public static final int firstAction = 1;
-    public static final int secondAction = 2;
 
     private void printTopMenu() {
         System.out.println("1. По цене");
