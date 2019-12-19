@@ -1,14 +1,14 @@
 package com.lesson.HomeworkEight.SortStrategy;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.Menu.Admin;
+import com.lesson.HomeworkEight.Menu.AdminMenu;
 
 import java.util.*;
 
 public class SortTopByPrice implements SortStrategy {
     @Override
-    public void sort() {
-        List list = new ArrayList(Admin.getTaxiPark().getMapCar().entrySet());
+    public void sortTop() {
+        List list = new ArrayList(AdminMenu.getTaxiPark().getMapCar().entrySet());
         Collections.sort(list, new Comparator<Map.Entry<Car, Integer>>() {
             @Override
             public int compare(Map.Entry<Car, Integer> o1, Map.Entry<Car, Integer> o2) {

@@ -8,10 +8,10 @@ public class AllActionStrategyForAdmin {
 
     public AllActionStrategyForAdmin(){
         this.mapAdmin = new HashMap<>();
-        mapAdmin.put(1, new FirstActionForAdmin());
-        mapAdmin.put(2, new SecondActionForAdmin());
-        mapAdmin.put(3, new ThirdActionForAdmin());
-        mapAdmin.put(4, new FourthActionForAdmin());
+        mapAdmin.put(1, new ActionForAdminToCreateTaxiPark());
+        mapAdmin.put(2, new ActionForAdminPrintCar());
+        mapAdmin.put(3, new ActionForAdminPrintOrders());
+        mapAdmin.put(4, new ActionForAdminLogInUser());
         mapAdmin.put(5, new isExitActionForAdmin());
     }
 

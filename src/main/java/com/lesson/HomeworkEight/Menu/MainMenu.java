@@ -1,17 +1,15 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.TaxiPark;
-
 import java.util.Scanner;
 
 public class MainMenu {
 
     public void start(){
         System.out.println("Введите роль (admin/user): ");
-        defineRole();
+        choiceRoll();
     }
 
-    private void defineRole(){
+    private void choiceRoll(){
         Scanner scanner = new Scanner(System.in);
         String role = scanner.next();
         while (!role.equals("admin") && !role.equals("user")){
@@ -20,7 +18,7 @@ public class MainMenu {
         }
         if (role.equals("admin")){
             System.out.println("Привет, admin!");
-            new Admin().adminStart();
+            new AdminMenu().adminStart();
         }
         else {
             System.out.println("Привет, user!");

@@ -1,13 +1,12 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.ActionStrategyForUserMenu.ActionStrategyForUser;
 import com.lesson.HomeworkEight.ActionStrategyForUserMenu.AllActionStrategyForUser;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
 
 public class UserMenu {
-    private ActionStrategyForUser actionStrategyForUser;
+    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
     public static final int isExit = 5;
 
@@ -20,11 +19,6 @@ public class UserMenu {
         System.out.println("5. Выход из приложения");
     }
 
-    private void action(ActionStrategyForUser actionStrategyForUser) {
-        this.actionStrategyForUser = actionStrategyForUser;
-        actionStrategyForUser.action();
-    }
-
     public void start() {
         Scanner scanner = new Scanner(System.in);
         AllActionStrategyForUser allActionStrategyForUser = new AllActionStrategyForUser();
@@ -35,13 +29,13 @@ public class UserMenu {
                 printMainMenu();
                 System.out.print("Введите номер меню: ");
                 keyString = scanner.next();
-                while (!new ValidatorForMenu().validate(keyString)) {
+                while (!validatorForMenu.validate(keyString)) {
                     System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
                     keyString = scanner.next();
                 }
                 keyInt = Integer.parseInt(keyString);
                 if (allActionStrategyForUser.getMap().containsKey(keyInt)) {
-                    action(allActionStrategyForUser.getMap().get(keyInt));
+                    allActionStrategyForUser.getMap().get(keyInt).action();
                 }
             } while (keyInt != isExit);
         } catch (NullPointerException e) {

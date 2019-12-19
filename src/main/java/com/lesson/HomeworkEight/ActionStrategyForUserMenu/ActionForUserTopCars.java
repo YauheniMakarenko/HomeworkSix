@@ -1,12 +1,12 @@
 package com.lesson.HomeworkEight.ActionStrategyForUserMenu;
 
-import com.lesson.HomeworkEight.Menu.Admin;
+import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.SortStrategy.AllSortStrategy;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;
 
-public class FirstActionForUser implements ActionStrategyForUser {
+public class ActionForUserTopCars implements ActionStrategyForUser {
 
     private void printTopMenu() {
         System.out.println("1. По цене");
@@ -28,7 +28,7 @@ public class FirstActionForUser implements ActionStrategyForUser {
         keyInt = Integer.parseInt(keyString);
         try{
             if (allSortStrategy.getMapSort().containsKey(keyInt)){
-                Admin.getTaxiPark().topBy(allSortStrategy.getMapSort().get(keyInt));
+                allSortStrategy.getMapSort().get(keyInt).sortTop();
             }
         }catch (IndexOutOfBoundsException e){
             e.getMessage();

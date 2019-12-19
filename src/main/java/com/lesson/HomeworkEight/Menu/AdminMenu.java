@@ -1,20 +1,15 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.ActionStrategyForAdminMenu.ActionStrategyForAdmin;
 import com.lesson.HomeworkEight.ActionStrategyForAdminMenu.AllActionStrategyForAdmin;
 import com.lesson.HomeworkEight.TaxiPark;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;
 
-public class Admin {
-    private static TaxiPark taxiPark;
-    private ActionStrategyForAdmin actionStrategyForAdmin;
+public class AdminMenu {
+    private static TaxiPark taxiPark = new TaxiPark();
     private static final int isExit = 5;
-
-    public Admin(){
-        this.taxiPark = new TaxiPark();
-    }
+    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
     private void printMainMenu() {
         System.out.println();
@@ -23,11 +18,6 @@ public class Admin {
         System.out.println("3. Вывести все заказы");
         System.out.println("4. Войти как user");
         System.out.println("5. Выход из приложения");
-    }
-
-    private void action(ActionStrategyForAdmin actionStrategyForAdmin){
-        this.actionStrategyForAdmin = actionStrategyForAdmin;
-        actionStrategyForAdmin.action();
     }
 
     public void adminStart(){
@@ -39,13 +29,13 @@ public class Admin {
             printMainMenu();
             System.out.print("Введите номер меню: ");
             keyString = scanner.next();
-            while (!new ValidatorForMenu().validate(keyString)){
+            while (!validatorForMenu.validate(keyString)){
                 System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
                 keyString = scanner.next();
             }
             keyInt = Integer.parseInt(keyString);
             if (allActionStrategyForAdmin.getMapAdmin().containsKey(keyInt)){
-                action(allActionStrategyForAdmin.getMapAdmin().get(keyInt));
+                allActionStrategyForAdmin.getMapAdmin().get(keyInt).action();
             }
         }while (keyInt != isExit);
         scanner.close();

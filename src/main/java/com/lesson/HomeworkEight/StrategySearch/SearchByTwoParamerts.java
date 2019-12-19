@@ -1,7 +1,7 @@
 package com.lesson.HomeworkEight.StrategySearch;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.Menu.Admin;
+import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.TaxiPark;
 
 import java.io.BufferedReader;
@@ -25,7 +25,7 @@ public class SearchByTwoParamerts implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = Admin.getTaxiPark();
+        TaxiPark taxiPark = AdminMenu.getTaxiPark();
         System.out.println("Введите производителя:");
         String firstParameter = reader();
         System.out.println("Введите класс авто: (A/S)");

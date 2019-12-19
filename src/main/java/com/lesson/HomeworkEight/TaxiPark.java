@@ -1,8 +1,6 @@
 package com.lesson.HomeworkEight;
 
 import com.lesson.HomeworkEight.File.CsvFile;
-import com.lesson.HomeworkEight.SortStrategy.SortStrategy;
-import com.lesson.HomeworkEight.StrategySearch.SearchStrategy;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
@@ -13,12 +11,11 @@ public class TaxiPark {
     private Map<Car, Integer> mapCar;
     private Map<String, Client> mapCarForClient;
     private int sum;
-    private SearchStrategy searchStrategy;
-    private SortStrategy sortStrategy;
+    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
     public TaxiPark() {
         this.mapCar = new HashMap<>();
-        this.mapCarForClient = new HashMap<String, Client>();
+        this.mapCarForClient = new HashMap<>();
     }
 
     public void addCar(Car car) {
@@ -69,17 +66,6 @@ public class TaxiPark {
         }
     }
 
-    public void topBy(SortStrategy sortStrategy) {
-        this.sortStrategy = sortStrategy;
-        sortStrategy.sort();
-    }
-
-
-    public void search(SearchStrategy searchStrategy) {
-        this.searchStrategy = searchStrategy;
-        searchStrategy.search();
-    }
-
     private String listPars(String givenString){
         String group = null;
         Pattern pattern = Pattern.compile(".+\\}");
@@ -102,7 +88,7 @@ public class TaxiPark {
         String keyString;
         int keyInt;
         keyString = scanner.next();
-        while (!new ValidatorForMenu().validate(keyString)) {
+        while (!validatorForMenu.validate(keyString)) {
             System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
             keyString = scanner.next();
         }

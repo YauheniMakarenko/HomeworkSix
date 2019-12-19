@@ -1,7 +1,7 @@
 package com.lesson.HomeworkEight.StrategySearch;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.Menu.Admin;
+import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.TaxiPark;
 
 import java.io.BufferedReader;
@@ -24,7 +24,7 @@ public class SearchByPrice implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = Admin.getTaxiPark();
+        TaxiPark taxiPark = AdminMenu.getTaxiPark();
         try {
             System.out.println("Введите минимальную цену:");
             int tmpMin = Integer.parseInt(reader());

@@ -1,14 +1,12 @@
 package com.lesson.HomeworkEight.ActionStrategyForUserMenu;
 
-import com.lesson.HomeworkEight.Menu.Admin;
+import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.StrategySearch.AllSearchStrategies;
-import com.lesson.HomeworkEight.StrategySearch.SearchStrategy;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
-import java.util.Map;
 import java.util.Scanner;
 
-public class ThirdActionForUser implements ActionStrategyForUser {
+public class ActionForUserSearch implements ActionStrategyForUser {
 
     private void printSearchMenu() {
         System.out.println("1. По цене");
@@ -31,7 +29,7 @@ public class ThirdActionForUser implements ActionStrategyForUser {
         }
         keyInt = Integer.parseInt(keyString);
         if (allSearchStrategies.getMap().containsKey(keyInt)){
-            Admin.getTaxiPark().search(allSearchStrategies.getMap().get(keyInt));
+            allSearchStrategies.getMap().get(keyInt).search();
         }
     }
 }
