@@ -9,7 +9,7 @@ public class ValidatorForMenu {
     private Matcher matcher;
 
 
-    private final String GIVEN_STRING = "\\d+";
+    private final String GIVEN_STRING = "\\d";
 
 
     public boolean validate(String givenString){

@@ -1,10 +1,14 @@
 package com.lesson.HomeworkEight.Menu;
 
+import com.lesson.HomeworkEight.File.ReadJSON;
+
 import java.util.Scanner;
 
 public class MainMenu {
 
     public void start(){
+        ReadJSON productFileReadJSON = new ReadJSON();
+        AdminMenu.getTaxiPark().addCar(productFileReadJSON.createLispProductFile("listCar.json"));
         System.out.println("Введите роль (admin/user): ");
         choiceRoll();
     }

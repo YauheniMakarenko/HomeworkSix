@@ -1,0 +1,1 @@
+Car{producer=RENAULT, model='Logan', carСlass=B, bodyType=SEDAN, typeOfDrive=FRONT, price=9200, year=2004, maxSpeed=175, fuelConsumption=7.9} = Client{name='DATT', address='DATT'}

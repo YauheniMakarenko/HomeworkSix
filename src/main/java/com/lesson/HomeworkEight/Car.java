@@ -102,4 +102,6 @@ public class Car {
     public int hashCode() {
         return Objects.hash(producer, model, carСlass, bodyType, typeOfDrive, price, year, maxSpeed, fuelConsumption);
     }
+
+
 }

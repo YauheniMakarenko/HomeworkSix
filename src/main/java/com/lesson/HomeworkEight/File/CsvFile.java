@@ -8,8 +8,8 @@ import java.io.FileWriter;
 
 public class CsvFile {
 
-    public void addProductInFile(Car car, Client client, String fileName) {
-        try(FileWriter fileWriter = new FileWriter(fileName, true)) {
+    public void addProductInFile(Car car, Client client) {
+        try(FileWriter fileWriter = new FileWriter("Orders.csv", true)) {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.append( car + " = " + client  + "\n");
             bufferedWriter.close();

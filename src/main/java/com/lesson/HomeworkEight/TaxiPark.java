@@ -5,6 +5,7 @@ import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.Producer;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.File.CsvFile;
+import com.lesson.HomeworkEight.File.WriteJSON;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
@@ -16,6 +17,8 @@ public class TaxiPark {
     private Map<Car, Client> mapCarForClient;
     private int sum;
     ValidatorForMenu validatorForMenu = new ValidatorForMenu();
+    CsvFile csvFile = new CsvFile();
+
 
     public TaxiPark() {
         this.mapCar = new HashMap<>();
@@ -89,8 +92,7 @@ public class TaxiPark {
                 String stringAddress = scanner.next();
                 Client client = new Client(stringName, stringAddress);
                 mapCarForClient.put(listCarString.get(keyInt), client);
-                CsvFile csvFile = new CsvFile();
-                csvFile.addProductInFile(listCarString.get(keyInt), client, "Orders.csv");
+                csvFile.addProductInFile(listCarString.get(keyInt), client);
             }
         }
         System.out.println("Вы успешно заказали машину!");
@@ -112,11 +114,11 @@ public class TaxiPark {
     }
 
     private Car createCar(String productsString) {
-        productsString.replace("{", "");
-        productsString.replace("'", "");
-        productsString.replace("Car", "");
-        productsString.replace("}", "");
-        productsString.replaceAll(" ", "");
+        productsString = productsString.replace("{", "");
+        productsString = productsString.replace("'", "");
+        productsString = productsString.replace("Car", "");
+        productsString = productsString.replace("}", "");
+        productsString = productsString.replaceAll(" ", "");
 
         String[] pairs = productsString.split(",");
 
