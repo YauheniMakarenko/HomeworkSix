@@ -2,10 +2,8 @@ package com.lesson.HomeworkEight;
 
 import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
-import com.lesson.HomeworkEight.Enum.Producer;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.File.CsvFile;
-import com.lesson.HomeworkEight.File.WriteJSON;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
@@ -39,6 +37,9 @@ public class TaxiPark {
     }
 
     public void addCar(List<Car> list) {
+        if (list == null) {
+            return;
+        }
         for (int i = 0; i < list.size(); i++) {
             addCar(list.get(i));
         }
@@ -63,6 +64,10 @@ public class TaxiPark {
 
     public Map<Car, Integer> getMapCar() {
         return mapCar;
+    }
+
+    public int getSum() {
+        return sum;
     }
 
     public void sort() {
@@ -93,9 +98,9 @@ public class TaxiPark {
                 Client client = new Client(stringName, stringAddress);
                 mapCarForClient.put(listCarString.get(keyInt), client);
                 csvFile.addProductInFile(listCarString.get(keyInt), client);
+                System.out.println("Вы успешно заказали машину!");
             }
         }
-        System.out.println("Вы успешно заказали машину!");
     }
 
     private List<Car> createListCar(){
@@ -131,7 +136,7 @@ public class TaxiPark {
         String[] split6 = pairs[6].split("=");
         String[] split7 = pairs[7].split("=");
         String[] split8 = pairs[8].split("=");
-        Car car = new Car(Producer.valueOf(split0[1]),
+        Car car = new Car(split0[1],
                 split1[1],
                 CarClass.valueOf(split2[1]),
                 BodyType.valueOf(split3[1]),

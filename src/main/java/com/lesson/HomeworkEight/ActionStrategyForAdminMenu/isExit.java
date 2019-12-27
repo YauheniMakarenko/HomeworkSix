@@ -1,6 +1,6 @@
 package com.lesson.HomeworkEight.ActionStrategyForAdminMenu;
 
-public class isExitActionForAdmin implements ActionStrategyForAdmin {
+public class isExit implements ActionStrategyForAdmin {
 
     @Override
     public void action() {

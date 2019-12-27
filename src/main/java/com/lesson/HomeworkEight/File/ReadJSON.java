@@ -3,7 +3,6 @@ package com.lesson.HomeworkEight.File;
 import com.lesson.HomeworkEight.*;
 import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
-import com.lesson.HomeworkEight.Enum.Producer;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 
 import java.io.BufferedReader;
@@ -41,7 +40,7 @@ public class ReadJSON {
         String[] split6 = pairs[6].split(":");
         String[] split7 = pairs[7].split(":");
         String[] split8 = pairs[8].split(":");
-        Car car = new Car(Producer.valueOf(split0[1]),
+        Car car = new Car(split0[1],
                 split1[1],
                 CarClass.valueOf(split2[1]),
                 BodyType.valueOf(split3[1]),

@@ -8,16 +8,17 @@ import java.util.Scanner;
 
 public class AdminMenu {
     private static TaxiPark taxiPark = new TaxiPark();
-    private final int isExit = 5;
+    private final int isExit = 6;
     ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
     private void printMainMenu() {
         System.out.println();
         System.out.println("1. Создать таксопарк");
-        System.out.println("2. Вывести все автомобили");
-        System.out.println("3. Вывести все заказы");
-        System.out.println("4. Войти как user");
-        System.out.println("5. Выход из приложения");
+        System.out.println("2. Добавить машину в таксопарк");
+        System.out.println("3. Вывести все автомобили");
+        System.out.println("4. Вывести все заказы");
+        System.out.println("5. Войти как user");
+        System.out.println("6. Выход из приложения");
     }
 
     public void adminStart(){

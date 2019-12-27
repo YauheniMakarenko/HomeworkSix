@@ -2,13 +2,12 @@ package com.lesson.HomeworkEight;
 
 import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
-import com.lesson.HomeworkEight.Enum.Producer;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 
 import java.util.Objects;
 
 public class Car {
-    private Producer producer;
+    private String producer;
     private String model;
     private CarClass carСlass;
     private BodyType bodyType;
@@ -18,7 +17,7 @@ public class Car {
     private int maxSpeed;
     private double fuelConsumption;
 
-    public Car(Producer producer, String model, CarClass carClass, BodyType bodyType, TypeOfDrive typeOfDrive, int price, int year,int maxSpeed, double fuelConsumption) {
+    public Car(String producer, String model, CarClass carClass, BodyType bodyType, TypeOfDrive typeOfDrive, int price, int year,int maxSpeed, double fuelConsumption) {
         this.producer = producer;
         this.model = model;
         this.carСlass = carClass;
@@ -31,7 +30,7 @@ public class Car {
     }
 
 
-    public Producer getProducer() {
+    public String getProducer() {
         return producer;
     }
 
@@ -91,7 +90,7 @@ public class Car {
                 year == car.year &&
                 maxSpeed == car.maxSpeed &&
                 Double.compare(car.fuelConsumption, fuelConsumption) == 0 &&
-                producer == car.producer &&
+                Objects.equals(producer, car.producer) &&
                 Objects.equals(model, car.model) &&
                 carСlass == car.carСlass &&
                 bodyType == car.bodyType &&
@@ -102,6 +101,4 @@ public class Car {
     public int hashCode() {
         return Objects.hash(producer, model, carСlass, bodyType, typeOfDrive, price, year, maxSpeed, fuelConsumption);
     }
-
-
 }
