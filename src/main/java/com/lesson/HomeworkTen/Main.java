@@ -1,6 +1,7 @@
 package com.lesson.HomeworkTen;
 
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -25,7 +26,9 @@ public class Main {
                 new Product(6, "A4Tech", 590),
                 new Product(7, "AMD", 700),
                 new Product(8, "Nvidia", 900),
-                new Product(9, "ТЕБЕТ", 837)
+                new Product(9, "ТЕБЕТ", 837),
+                new Product(10, "ТЕБЕТ", 837),
+                new Product(11, "ТЕБЕТ", 837)
         );
 
         List<Product> collect1 = productList.stream()
@@ -39,6 +42,11 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println(collect2);
 
+        List<Product> collect3 = productList.stream()
+                .sorted((o1, o2) -> (-Integer.compare(o1.getPrice(), o2.getPrice())))
+                .skip(5)
+                .collect(Collectors.toList());
+        System.out.println(collect3);
 
         OptionalDouble collect4 = productList.stream()
                 .map(product -> product.getPrice())
@@ -49,9 +57,12 @@ public class Main {
                 .collect(Collectors.toMap((product) -> product.getId(), (product) -> "name:" + product.getName() + ", price:" + product.getPrice()));
         System.out.println(collect5);
 
-        /*List collect6 =  productList.stream()
+        Map<Product, Long> collect6 = productList.stream()
+                .collect(Collectors.toMap(product -> product, product -> productList.stream()
+                        .filter(product1 -> product1.getName().equals(product.getName())).count()));
+        System.out.println(collect6);
 
-        System.out.println(collect6);*/
+
     }
 
 }

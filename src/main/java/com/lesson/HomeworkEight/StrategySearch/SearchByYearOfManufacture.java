@@ -25,7 +25,7 @@ public class SearchByYearOfManufacture implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = AdminMenu.getTaxiPark();
+        TaxiPark taxiPark = TaxiPark.createSingletonTaxiPark();
         try {
             System.out.println("Введите год выпуска:");
             int tmp = Integer.parseInt(reader());

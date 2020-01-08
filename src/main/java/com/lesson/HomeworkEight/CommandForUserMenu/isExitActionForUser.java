@@ -1,7 +1,6 @@
-package com.lesson.HomeworkEight.ActionStrategyForAdminMenu;
+package com.lesson.HomeworkEight.CommandForUserMenu;
 
-public class isExit implements ActionStrategyForAdmin {
-
+public class isExitActionForUser implements CommandsForUser {
     @Override
     public void action() {
         System.out.println("Завершение программы...");

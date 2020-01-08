@@ -1,12 +1,11 @@
-package com.lesson.HomeworkEight.ActionStrategyForUserMenu;
+package com.lesson.HomeworkEight.CommandForUserMenu;
 
-import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.SortStrategy.AllSortStrategy;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;
 
-public class ActionForUserTopCars implements ActionStrategyForUser {
+public class ActionForUserTopCars implements CommandsForUser {
 
     private void printTopMenu() {
         System.out.println("1. По цене");

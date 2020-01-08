@@ -24,7 +24,7 @@ public class SearchByPrice implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = AdminMenu.getTaxiPark();
+        TaxiPark taxiPark = TaxiPark.createSingletonTaxiPark();
         try {
             System.out.println("Введите минимальную цену:");
             int tmpMin = Integer.parseInt(reader());

@@ -23,7 +23,7 @@ public class TaxiParkTest {
 
     @Before
     public void init(){
-        taxiPark = new TaxiPark();
+        taxiPark = TaxiPark.createSingletonTaxiPark();
         mapCar = new HashMap<>();
         mapCarForClient = new HashMap<>();
 
@@ -63,7 +63,7 @@ public class TaxiParkTest {
 
     @Test
     public void testAddListCarNullInTaxoPark(){
-        TaxiPark taxiParkTest = new TaxiPark();
+        TaxiPark taxiParkTest = TaxiPark.createSingletonTaxiPark();
         List<Car> list = null;
         taxiParkTest.addCar(list);
         Assert.assertNotNull(taxiParkTest.getMapCar()); //{}

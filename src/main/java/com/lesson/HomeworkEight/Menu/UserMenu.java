@@ -1,6 +1,6 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.ActionStrategyForUserMenu.AllActionStrategyForUser;
+import com.lesson.HomeworkEight.CommandForUserMenu.AllCommandsForUser;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
@@ -21,7 +21,7 @@ public class UserMenu {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        AllActionStrategyForUser allActionStrategyForUser = new AllActionStrategyForUser();
+        AllCommandsForUser allCommandsForUser = new AllCommandsForUser();
         String keyString;
         int keyInt;
         try {
@@ -34,8 +34,8 @@ public class UserMenu {
                     keyString = scanner.next();
                 }
                 keyInt = Integer.parseInt(keyString);
-                if (allActionStrategyForUser.getMap().containsKey(keyInt)) {
-                    allActionStrategyForUser.getMap().get(keyInt).action();
+                if (allCommandsForUser.getMap().containsKey(keyInt)) {
+                    allCommandsForUser.getMap().get(keyInt).action();
                 }
             } while (keyInt != isExit);
         } catch (NullPointerException e) {

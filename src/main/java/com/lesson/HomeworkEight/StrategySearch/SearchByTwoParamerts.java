@@ -25,7 +25,7 @@ public class SearchByTwoParamerts implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = AdminMenu.getTaxiPark();
+        TaxiPark taxiPark = TaxiPark.createSingletonTaxiPark();
         System.out.println("Введите производителя:");
         String firstParameter = reader();
         System.out.println("Введите класс авто: (A/S)");

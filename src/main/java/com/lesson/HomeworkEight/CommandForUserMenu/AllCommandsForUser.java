@@ -1,12 +1,12 @@
-package com.lesson.HomeworkEight.ActionStrategyForUserMenu;
+package com.lesson.HomeworkEight.CommandForUserMenu;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AllActionStrategyForUser {
-    Map<Integer, ActionStrategyForUser> map;
+public class AllCommandsForUser {
+    Map<Integer, CommandsForUser> map;
 
-    public AllActionStrategyForUser(){
+    public AllCommandsForUser(){
         this.map = new HashMap<>();
         map.put(1, new ActionForUserTopCars());
         map.put(2, new ActionForUserSortFullСonsumption());
@@ -15,7 +15,7 @@ public class AllActionStrategyForUser {
         map.put(5, new isExitActionForUser());
     }
 
-    public Map<Integer, ActionStrategyForUser> getMap() {
+    public Map<Integer, CommandsForUser> getMap() {
         return map;
     }
 }

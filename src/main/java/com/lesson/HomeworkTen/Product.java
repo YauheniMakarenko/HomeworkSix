@@ -1,5 +1,7 @@
 package com.lesson.HomeworkTen;
 
+import java.util.Objects;
+
 public class Product {
     private final String name;
     private final int id;
@@ -32,31 +34,19 @@ public class Product {
                 '}';
     }
 
+
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        if (this == obj) {
-            return true;
-        }
-        Product product = (Product) obj;
-        if (getId() != product.getId()) {
-            return false;
-        }
-        if (!getName().equals(product.getName())){
-            return false;
-        }
-        return true;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id &&
+                price == product.price &&
+                Objects.equals(name, product.name);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        long temp = getPrice();
-        int result = 1;
-        result = prime * result * getId() + (int) (temp ^ (temp >>> prime + 1));
-        result = prime * result + getName().hashCode();
-        return result;
+        return Objects.hash(name, id, price);
     }
 }

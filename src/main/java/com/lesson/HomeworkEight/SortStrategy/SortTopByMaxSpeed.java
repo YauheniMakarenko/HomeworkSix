@@ -1,14 +1,14 @@
 package com.lesson.HomeworkEight.SortStrategy;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.Menu.AdminMenu;
+import com.lesson.HomeworkEight.TaxiPark;
 
 import java.util.*;
 
 public class SortTopByMaxSpeed implements SortStrategy {
     @Override
     public void sortTop() {
-        List list = new ArrayList(AdminMenu.getTaxiPark().getMapCar().entrySet());
+        List list = new ArrayList(TaxiPark.createSingletonTaxiPark().getMapCar().entrySet());
         Collections.sort(list, new Comparator<Map.Entry<Car, Integer>>() {
             @Override
             public int compare(Map.Entry<Car, Integer> o1, Map.Entry<Car, Integer> o2) {

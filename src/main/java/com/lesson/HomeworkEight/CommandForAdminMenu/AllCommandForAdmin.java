@@ -1,12 +1,12 @@
-package com.lesson.HomeworkEight.ActionStrategyForAdminMenu;
+package com.lesson.HomeworkEight.CommandForAdminMenu;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AllActionStrategyForAdmin {
-    private Map<Integer, ActionStrategyForAdmin> mapAdmin;
+public class AllCommandForAdmin {
+    private Map<Integer, CommandsForAdmin> mapAdmin;
 
-    public AllActionStrategyForAdmin(){
+    public AllCommandForAdmin(){
         this.mapAdmin = new HashMap<>();
         mapAdmin.put(1, new CreateTaxiPark());
         mapAdmin.put(2, new AddCarInTaxoPark());
@@ -16,7 +16,7 @@ public class AllActionStrategyForAdmin {
         mapAdmin.put(6, new isExit());
     }
 
-    public Map<Integer, ActionStrategyForAdmin> getMapAdmin() {
+    public Map<Integer, CommandsForAdmin> getMapAdmin() {
         return mapAdmin;
     }
 }

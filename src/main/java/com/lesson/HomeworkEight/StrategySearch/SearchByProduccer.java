@@ -25,7 +25,7 @@ public class SearchByProduccer implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = AdminMenu.getTaxiPark();
+        TaxiPark taxiPark = TaxiPark.createSingletonTaxiPark();
         System.out.println("Введите проиводителя:");
         String tmp = reader();
         for (Map.Entry<Car, Integer> map : taxiPark.getMapCar().entrySet()) {

@@ -11,16 +11,22 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TaxiPark {
-    private Map<Car, Integer> mapCar;
-    private Map<Car, Client> mapCarForClient;
+    private Map<Car, Integer> mapCar = new HashMap<>();
+    private Map<Car, Client> mapCarForClient = new HashMap<>();
     private int sum;
     ValidatorForMenu validatorForMenu = new ValidatorForMenu();
     CsvFile csvFile = new CsvFile();
+    private static TaxiPark taxiPark;
 
 
-    public TaxiPark() {
-        this.mapCar = new HashMap<>();
-        this.mapCarForClient = new HashMap<>();
+    private TaxiPark() {
+    }
+
+    public static TaxiPark createSingletonTaxiPark(){
+        if (taxiPark == null){
+            taxiPark = new TaxiPark();
+        }
+        return taxiPark;
     }
 
     public void addCar(Car car) {

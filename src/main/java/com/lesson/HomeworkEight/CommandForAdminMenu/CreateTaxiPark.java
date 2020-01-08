@@ -1,18 +1,18 @@
-package com.lesson.HomeworkEight.ActionStrategyForAdminMenu;
+package com.lesson.HomeworkEight.CommandForAdminMenu;
 
 import com.lesson.HomeworkEight.Car;
 import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.File.ReadJSON;
-import com.lesson.HomeworkEight.Menu.AdminMenu;
+import com.lesson.HomeworkEight.TaxiPark;
 import com.lesson.HomeworkEight.Validators.ValidatorForFileName;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CreateTaxiPark implements ActionStrategyForAdmin {
+public class CreateTaxiPark implements CommandsForAdmin {
 
     ValidatorForFileName validatorForFileName = new ValidatorForFileName();
 
@@ -27,12 +27,12 @@ public class CreateTaxiPark implements ActionStrategyForAdmin {
         }
         try {
             ReadJSON productFileReadJSON = new ReadJSON();
-            AdminMenu.getTaxiPark().addCar(productFileReadJSON.createLispProductFile(select));
+            TaxiPark.createSingletonTaxiPark().addCar(productFileReadJSON.createLispProductFile(select));
         } catch (Exception e) {
             e.getStackTrace();
             System.out.println("Ошибка! Данного файла не обнаружено!");
             System.out.println("Данные загружены из Main");
-            AdminMenu.getTaxiPark().addCar(add());
+            TaxiPark.createSingletonTaxiPark().addCar(add());
         }
     }
 

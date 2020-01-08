@@ -12,9 +12,9 @@ public class Reccursion {
 
     public int sumOfDigits(int number) {
         if (number < 10) {
-            return number%10;
+            return number % 10;
         } else {
-            return number%10 + sumOfDigits(number / 10);
+            return number % 10 + sumOfDigits(number / 10);
         }
     }
 
@@ -22,8 +22,8 @@ public class Reccursion {
         if (givenString.length() <= 1) {
             return true;
         }
-        if (givenString.charAt(0) == givenString.charAt(givenString.length()-1)){
-            String s = givenString.substring(1, givenString.length()-1);
+        if (givenString.charAt(0) == givenString.charAt(givenString.length() - 1)) {
+            String s = givenString.substring(1, givenString.length() - 1);
             return palindrome(s);
         }
         return false;
