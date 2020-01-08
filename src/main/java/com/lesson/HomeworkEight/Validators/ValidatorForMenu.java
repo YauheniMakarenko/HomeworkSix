@@ -5,15 +5,12 @@ import java.util.regex.Pattern;
 
 public class ValidatorForMenu {
 
-    private Pattern pattern;
-    private Matcher matcher;
-
-
     private final String GIVEN_STRING = "\\d+";
 
+    private Pattern pattern = Pattern.compile(GIVEN_STRING);
+    private Matcher matcher;
 
     public boolean validate(String givenString){
-        pattern = Pattern.compile(GIVEN_STRING);
         matcher = pattern.matcher(givenString);
         return matcher.matches();
     }

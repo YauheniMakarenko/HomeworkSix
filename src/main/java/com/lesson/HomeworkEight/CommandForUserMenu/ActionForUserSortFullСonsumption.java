@@ -2,10 +2,10 @@ package com.lesson.HomeworkEight.CommandForUserMenu;
 
 import com.lesson.HomeworkEight.TaxiPark;
 
-public class ActionForUserSortFullСonsumption implements CommandsForUser {
+public class ActionForUserSortFullСonsumption implements CommandForUser {
 
     @Override
     public void action() {
-        TaxiPark.createSingletonTaxiPark().sort();
+        TaxiPark.getInstance().sort();
     }
 }

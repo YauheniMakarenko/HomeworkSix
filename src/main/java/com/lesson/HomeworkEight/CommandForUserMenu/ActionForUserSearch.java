@@ -5,7 +5,7 @@ import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;
 
-public class ActionForUserSearch implements CommandsForUser {
+public class ActionForUserSearch implements CommandForUser {
 
     private void printSearchMenu() {
         System.out.println("1. По цене");

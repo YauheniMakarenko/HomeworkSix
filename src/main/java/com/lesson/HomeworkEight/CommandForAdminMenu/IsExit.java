@@ -1,6 +1,6 @@
 package com.lesson.HomeworkEight.CommandForAdminMenu;
 
-public class isExit implements CommandsForAdmin {
+public class IsExit implements CommandForAdmin {
 
     @Override
     public void action() {

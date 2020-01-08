@@ -12,9 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CreateTaxiPark implements CommandsForAdmin {
+public class CreateTaxiPark implements CommandForAdmin {
 
-    ValidatorForFileName validatorForFileName = new ValidatorForFileName();
+    private ValidatorForFileName validatorForFileName = new ValidatorForFileName();
 
     @Override
     public void action() {
@@ -27,16 +27,16 @@ public class CreateTaxiPark implements CommandsForAdmin {
         }
         try {
             ReadJSON productFileReadJSON = new ReadJSON();
-            TaxiPark.createSingletonTaxiPark().addCar(productFileReadJSON.createLispProductFile(select));
+            TaxiPark.getInstance().addCar(productFileReadJSON.createLispProductFile(select));
         } catch (Exception e) {
             e.getStackTrace();
             System.out.println("Ошибка! Данного файла не обнаружено!");
             System.out.println("Данные загружены из Main");
-            TaxiPark.createSingletonTaxiPark().addCar(add());
+            TaxiPark.getInstance().addCar(add());
         }
     }
 
-    public List add() {
+    public List<Car> add() {
         List<Car> listCar = new ArrayList<>();
         listCar.add(new Car("NISSAN", "GT-R", CarClass.S, BodyType.SEDAN, TypeOfDrive.REAR, 32000, 1995, 300, 20));
         listCar.add(new Car("NISSAN", "GT-R", CarClass.S, BodyType.SEDAN, TypeOfDrive.REAR, 32000, 1995, 300, 20));

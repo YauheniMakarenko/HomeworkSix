@@ -1,11 +1,9 @@
 package com.lesson.HomeworkTen;
 
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Main {
-    Reccursion reccursion = new Reccursion();
 
     public static void main(String[] args) {
 

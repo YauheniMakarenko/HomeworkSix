@@ -11,9 +11,10 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AddCarInTaxoPark implements CommandsForAdmin {
+public class AddCarInTaxoPark implements CommandForAdmin {
 
-    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
+    private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
+
 
     @Override
     public void action() {
@@ -67,9 +68,7 @@ public class AddCarInTaxoPark implements CommandsForAdmin {
         double fuelConsumption = Double.parseDouble(fuelConsumprionString);
 
         Car car = new Car(producer, model, CarClass.valueOf(carClass), BodyType.valueOf(bodyType), TypeOfDrive.valueOf(typeOfDrive), price, year, maxSpeed, fuelConsumption);
-        TaxiPark.createSingletonTaxiPark().addCar(car);
+        TaxiPark.getInstance().addCar(car);
         System.out.println("Автомобиль добавлен в таксопарк!");
-
-
     }
 }

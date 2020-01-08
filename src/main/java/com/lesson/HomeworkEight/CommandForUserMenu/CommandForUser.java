@@ -1,5 +1,5 @@
 package com.lesson.HomeworkEight.CommandForUserMenu;
 
-public interface CommandsForUser {
+public interface CommandForUser {
     void action();
 }

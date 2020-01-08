@@ -1,11 +1,10 @@
 package com.lesson.HomeworkEight.CommandForAdminMenu;
 
-import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.TaxiPark;
 
-public class PrintOrders implements CommandsForAdmin {
+public class PrintOrders implements CommandForAdmin {
     @Override
     public void action() {
-        TaxiPark.createSingletonTaxiPark().printOrders();
+        TaxiPark.getInstance().printOrders();
     }
 }

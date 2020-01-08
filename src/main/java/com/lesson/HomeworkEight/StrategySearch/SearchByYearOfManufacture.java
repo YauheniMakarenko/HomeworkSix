@@ -1,7 +1,6 @@
 package com.lesson.HomeworkEight.StrategySearch;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.Menu.AdminMenu;
 import com.lesson.HomeworkEight.TaxiPark;
 
 import java.io.BufferedReader;
@@ -25,7 +24,7 @@ public class SearchByYearOfManufacture implements SearchStrategy {
 
     @Override
     public void search() {
-        TaxiPark taxiPark = TaxiPark.createSingletonTaxiPark();
+        TaxiPark taxiPark = TaxiPark.getInstance();
         try {
             System.out.println("Введите год выпуска:");
             int tmp = Integer.parseInt(reader());

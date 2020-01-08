@@ -9,24 +9,25 @@ import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collector;
 
 public class TaxiPark {
     private Map<Car, Integer> mapCar = new HashMap<>();
     private Map<Car, Client> mapCarForClient = new HashMap<>();
     private int sum;
-    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
-    CsvFile csvFile = new CsvFile();
-    private static TaxiPark taxiPark;
+    private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
+    private CsvFile csvFile = new CsvFile();
+    private static TaxiPark instance;
 
 
     private TaxiPark() {
     }
 
-    public static TaxiPark createSingletonTaxiPark(){
-        if (taxiPark == null){
-            taxiPark = new TaxiPark();
+    public static TaxiPark getInstance(){
+        if (instance == null){
+            instance = new TaxiPark();
         }
-        return taxiPark;
+        return instance;
     }
 
     public void addCar(Car car) {
@@ -78,7 +79,9 @@ public class TaxiPark {
 
     public void sort() {
         List list = new ArrayList(getMapCar().entrySet());
-        Collections.sort(list, new CompareCar());
+        Collections.sort(list, (Comparator<Map.Entry<Car, Integer>>) (o1, o2) ->
+                (int) Math.round(100.0 * (o1.getKey().getFuelConsumption() - o2.getKey().getFuelConsumption())));
+
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }

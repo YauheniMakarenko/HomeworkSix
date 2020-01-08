@@ -1,5 +1,5 @@
 package com.lesson.HomeworkEight.CommandForAdminMenu;
 
-public interface CommandsForAdmin {
+public interface CommandForAdmin {
     void action();
 }

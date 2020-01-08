@@ -4,15 +4,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidatorForFileName {
-    private Pattern pattern;
-    private Matcher matcher;
-
 
     private final String FILENAME_PATTERN = ".+\\.json";
 
+    private Pattern pattern = Pattern.compile(FILENAME_PATTERN);
+    private Matcher matcher;
 
     public boolean validate(String fileName){
-        pattern = Pattern.compile(FILENAME_PATTERN);
         matcher = pattern.matcher(fileName);
         return matcher.matches();
     }

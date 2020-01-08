@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AllCommandsForUser {
-    Map<Integer, CommandsForUser> map;
+    Map<Integer, CommandForUser> map;
 
     public AllCommandsForUser(){
         this.map = new HashMap<>();
@@ -12,10 +12,10 @@ public class AllCommandsForUser {
         map.put(2, new ActionForUserSortFullСonsumption());
         map.put(3, new ActionForUserSearch());
         map.put(4, new ActionForUserOrderCar());
-        map.put(5, new isExitActionForUser());
+        map.put(5, new IsExitActionForUser());
     }
 
-    public Map<Integer, CommandsForUser> getMap() {
+    public Map<Integer, CommandForUser> getMap() {
         return map;
     }
 }

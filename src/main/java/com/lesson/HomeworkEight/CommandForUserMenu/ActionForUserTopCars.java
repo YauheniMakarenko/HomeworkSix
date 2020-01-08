@@ -5,7 +5,7 @@ import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;
 
-public class ActionForUserTopCars implements CommandsForUser {
+public class ActionForUserTopCars implements CommandForUser {
 
     private void printTopMenu() {
         System.out.println("1. По цене");
