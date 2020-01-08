@@ -81,7 +81,6 @@ public class TaxiPark {
         List list = new ArrayList(getMapCar().entrySet());
         Collections.sort(list, (Comparator<Map.Entry<Car, Integer>>) (o1, o2) ->
                 (int) Math.round(100.0 * (o1.getKey().getFuelConsumption() - o2.getKey().getFuelConsumption())));
-
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
