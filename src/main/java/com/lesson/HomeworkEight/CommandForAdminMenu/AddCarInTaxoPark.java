@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 public class AddCarInTaxoPark implements CommandForAdmin {
 
     private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
-    private Scanner scanner;
+    private Scanner scanner = new Scanner(System.in);
 
     @Override
     public void action() {
