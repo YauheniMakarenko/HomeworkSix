@@ -31,24 +31,15 @@ public class ReadJSON {
     private Car createProduct(String productsString) {
         String[] pairs = productsString.split(",");
 
-        String[] split0 = pairs[0].split(":");
-        String[] split1 = pairs[1].split(":");
-        String[] split2 = pairs[2].split(":");
-        String[] split3 = pairs[3].split(":");
-        String[] split4 = pairs[4].split(":");
-        String[] split5 = pairs[5].split(":");
-        String[] split6 = pairs[6].split(":");
-        String[] split7 = pairs[7].split(":");
-        String[] split8 = pairs[8].split(":");
-        Car car = new Car(split0[1],
-                split1[1],
-                CarClass.valueOf(split2[1]),
-                BodyType.valueOf(split3[1]),
-                TypeOfDrive.valueOf(split4[1]),
-                Integer.parseInt(split5[1]),
-                Integer.parseInt(split6[1]),
-                Integer.parseInt(split7[1]),
-                Double.parseDouble(split8[1]));
+        Car car = new Car(pairs[0].split(":")[1],
+                pairs[1].split(":")[1],
+                CarClass.valueOf(pairs[2].split(":")[1]),
+                BodyType.valueOf(pairs[3].split(":")[1]),
+                TypeOfDrive.valueOf(pairs[4].split(":")[1]),
+                Integer.parseInt(pairs[5].split(":")[1]),
+                Integer.parseInt(pairs[6].split(":")[1]),
+                Integer.parseInt(pairs[7].split(":")[1]),
+                Double.parseDouble(pairs[8].split(":")[1]));
         return car;
     }
 

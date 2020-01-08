@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AllCommandsForUser {
-    Map<Integer, CommandForUser> map;
+    private Map<Integer, CommandForUser> map;
 
     public AllCommandsForUser(){
         this.map = new HashMap<>();
