@@ -68,11 +68,10 @@ public class Task5 {
                         //TimeUnit.SECONDS.sleep(1);
                     }
                 }
-                synchronized (listOfQueues.get(numberOfQueue)) {
-                    if (listOfQueues.get(numberOfQueue).isEmpty()) {
-                        numberOfQueue = random.nextInt(10);
-                    }
+                if (listOfQueues.get(numberOfQueue).isEmpty()) {
+                    numberOfQueue = random.nextInt(10);
                 }
+
             }
             return null;
         }
