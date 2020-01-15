@@ -1,7 +1,7 @@
 package com.lesson.HomeworkEight.StrategySearch;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.TaxiPark;
+import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
 
 import java.io.BufferedReader;
 import java.io.IOException;

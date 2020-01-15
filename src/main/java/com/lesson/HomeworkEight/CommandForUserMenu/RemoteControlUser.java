@@ -3,10 +3,10 @@ package com.lesson.HomeworkEight.CommandForUserMenu;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AllCommandsForUser {
+public class RemoteControlUser {
     private Map<Integer, CommandForUser> map;
 
-    public AllCommandsForUser(){
+    public RemoteControlUser(){
         this.map = new HashMap<>();
         map.put(1, new ActionForUserTopCars());
         map.put(2, new ActionForUserSortFullСonsumption());

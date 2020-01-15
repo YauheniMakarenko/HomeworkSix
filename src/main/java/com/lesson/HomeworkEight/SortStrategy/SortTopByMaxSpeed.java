@@ -1,8 +1,7 @@
 package com.lesson.HomeworkEight.SortStrategy;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.TaxiPark;
-import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
+import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
 
 import java.util.*;
 

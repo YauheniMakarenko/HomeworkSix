@@ -1,7 +1,7 @@
 package com.lesson.HomeworkEight.Menu;
 
 import com.lesson.HomeworkEight.File.ReadJSON;
-import com.lesson.HomeworkEight.TaxiPark;
+import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class MainMenu {
 
     public void start(){
         /*ReadJSON productFileReadJSON = new ReadJSON();
-        TaxiPark.createSingletonTaxiPark().addCar(productFileReadJSON.createLispProductFile("listCar.json"));*/
+        TaxiPark.getInstance().addCar(productFileReadJSON.createLispProductFile("listCar.json"));*/
         System.out.println("Введите роль (admin/user): ");
         choiceRoll();
     }

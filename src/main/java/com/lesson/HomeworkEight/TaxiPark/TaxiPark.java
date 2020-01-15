@@ -1,5 +1,7 @@
-package com.lesson.HomeworkEight;
+package com.lesson.HomeworkEight.TaxiPark;
 
+import com.lesson.HomeworkEight.Car;
+import com.lesson.HomeworkEight.Client;
 import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
@@ -9,12 +11,11 @@ import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collector;
 
-public class TaxiPark {
+public class TaxiPark implements ITaxiPark {
     private Map<Car, Integer> mapCar = new HashMap<>();
     private Map<Car, Client> mapCarForClient = new HashMap<>();
-    private int sum;
+    private int costOfCars;
     private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
     private CsvFile csvFile = new CsvFile();
     private static TaxiPark instance;
@@ -23,6 +24,7 @@ public class TaxiPark {
     private TaxiPark() {
     }
 
+
     public static TaxiPark getInstance() {
         if (instance == null) {
             instance = new TaxiPark();
@@ -30,16 +32,17 @@ public class TaxiPark {
         return instance;
     }
 
+    @Override
     public void addCar(Car car) {
         if (car == null) {
             return;
         }
         if (!mapCar.containsKey(car)) {
             mapCar.put(car, 1);
-            sum += car.getPrice();
+            costOfCars += car.getPrice();
         } else {
             mapCar.put(car, mapCar.get(car) + 1);
-            sum += car.getPrice();
+            costOfCars += car.getPrice();
         }
     }
 
@@ -66,17 +69,20 @@ public class TaxiPark {
             System.out.println(map.getKey() + ":" + map.getValue());
         }
         System.out.println("--------------------------------------------");
-        System.out.println("Сost of all cars: " + sum);
+        System.out.println("Сost of all cars: " + costOfCars);
     }
 
+    @Override
     public Map<Car, Integer> getMapCar() {
         return mapCar;
     }
 
-    public int getSum() {
-        return sum;
+    @Override
+    public int getCostOfCars() {
+        return costOfCars;
     }
 
+    @Override
     public void sort() {
         List list = new ArrayList(getMapCar().entrySet());
         Collections.sort(list, (Comparator<Map.Entry<Car, Integer>>) (o1, o2) ->

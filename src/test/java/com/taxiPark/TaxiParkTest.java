@@ -6,7 +6,9 @@ import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.File.ReadJSON;
-import com.lesson.HomeworkEight.TaxiPark;
+import com.lesson.HomeworkEight.SortStrategy.SortTopByMaxSpeed;
+import com.lesson.HomeworkEight.SortStrategy.SortTopByPrice;
+import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +21,6 @@ public class TaxiParkTest {
     private TaxiPark taxiPark;
     private Map<Car, Integer> mapCar;
     private Map<Car, Client> mapCarForClient;
-    private int sum;
 
     @Before
     public void init(){
@@ -27,13 +28,14 @@ public class TaxiParkTest {
         mapCar = new HashMap<>();
         mapCarForClient = new HashMap<>();
 
-        ReadJSON productFileReadJSON = new ReadJSON();
-        taxiPark.addCar(productFileReadJSON.createLispProductFile("listCar.json"));
+
     }
 
     @Test
     public void testCostAllCars(){
-        Assert.assertEquals(1365900, taxiPark.getSum());
+        ReadJSON productFileReadJSON = new ReadJSON();
+        taxiPark.addCar(productFileReadJSON.createLispProductFile("listCar.json"));
+        Assert.assertEquals(1365900, taxiPark.getCostOfCars());
     }
 
     @Test
@@ -69,4 +71,35 @@ public class TaxiParkTest {
         Assert.assertNotNull(taxiParkTest.getMapCar()); //{}
     }
 
+    @Test
+    public void testTopCarSpeed(){
+        Car car1 = new Car("AAAA", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 150000, 2018, 350, 8.8);
+        Car car2 = new Car("BBB", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 200000, 2018, 300, 7.8);
+        Car car3 = new Car("CCC", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 250000, 2018, 400, 6.8);
+        Car car4 = new Car("DDD", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 150000, 2018, 450, 10.8);
+        taxiPark.addCar(car1);
+        taxiPark.addCar(car2);
+        taxiPark.addCar(car3);
+        taxiPark.addCar(car4);
+        List<Map.Entry<Car, Integer>> list = new SortTopByMaxSpeed().sortTop();
+        Assert.assertTrue(list.get(0).getKey() == car4);
+        Assert.assertTrue(list.get(1).getKey() == car3);
+        Assert.assertTrue(list.get(2).getKey() == car1);
+    }
+
+    @Test
+    public void testTopCarPrice(){
+        Car car1 = new Car("AAAA", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 150000, 2018, 350, 8.8);
+        Car car2 = new Car("BBB", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 200000, 2018, 300, 7.8);
+        Car car3 = new Car("CCC", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 250000, 2018, 400, 6.8);
+        Car car4 = new Car("DDD", "AAAA", CarClass.D, BodyType.SEDAN, TypeOfDrive.FULL, 100000, 2018, 450, 10.8);
+        taxiPark.addCar(car1);
+        taxiPark.addCar(car2);
+        taxiPark.addCar(car3);
+        taxiPark.addCar(car4);
+        List<Map.Entry<Car, Integer>> list = new SortTopByPrice().sortTop();
+        Assert.assertTrue(list.get(0).getKey() == car3);
+        Assert.assertTrue(list.get(1).getKey() == car2);
+        Assert.assertTrue(list.get(2).getKey() == car1);
+    }
 }

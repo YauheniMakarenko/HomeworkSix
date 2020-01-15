@@ -1,7 +1,7 @@
 package com.lesson.HomeworkEight.StrategySearch;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.TaxiPark;
+import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class SearchByTwoParamerts implements SearchStrategy {
                 ", J-внедорожники, M-минивены, S-спорткар");
         String secondParameter = reader();
         for (Map.Entry<Car, Integer> map : taxiPark.getMapCar().entrySet()) {
-            if (map.getKey().getProducer().toString().equalsIgnoreCase(firstParameter)
+            if (map.getKey().getProducer().equalsIgnoreCase(firstParameter)
                     && map.getKey().getCarСlass().toString().equalsIgnoreCase(secondParameter)) {
                 System.out.println(map.getKey() + ":" + map.getValue());
             }

@@ -1,6 +1,6 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.CommandForUserMenu.AllCommandsForUser;
+import com.lesson.HomeworkEight.CommandForUserMenu.RemoteControlUser;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
@@ -21,7 +21,7 @@ public class UserMenu {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        AllCommandsForUser allCommandsForUser = new AllCommandsForUser();
+        RemoteControlUser remoteControlUser = new RemoteControlUser();
         String keyString;
         int keyInt;
         try {
@@ -34,8 +34,8 @@ public class UserMenu {
                     keyString = scanner.next();
                 }
                 keyInt = Integer.parseInt(keyString);
-                if (allCommandsForUser.getMap().containsKey(keyInt)) {
-                    allCommandsForUser.getMap().get(keyInt).action();
+                if (remoteControlUser.getMap().containsKey(keyInt)) {
+                    remoteControlUser.getMap().get(keyInt).action();
                 }
             } while (keyInt != isExit);
         } catch (NullPointerException e) {

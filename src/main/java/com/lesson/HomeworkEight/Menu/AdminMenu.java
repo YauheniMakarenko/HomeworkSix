@@ -1,7 +1,6 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.CommandForAdminMenu.AllCommandForAdmin;
-import com.lesson.HomeworkEight.TaxiPark;
+import com.lesson.HomeworkEight.CommandForAdminMenu.RemoteControlAdmin;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;
@@ -23,7 +22,7 @@ public class AdminMenu {
 
     public void adminStart(){
         Scanner scanner = new Scanner(System.in);
-        AllCommandForAdmin allCommandForAdmin = new AllCommandForAdmin();
+        RemoteControlAdmin remoteControlAdmin = new RemoteControlAdmin();
         String keyString;
         int keyInt;
         do {
@@ -35,8 +34,8 @@ public class AdminMenu {
                 keyString = scanner.next();
             }
             keyInt = Integer.parseInt(keyString);
-            if (allCommandForAdmin.getMapAdmin().containsKey(keyInt)){
-                allCommandForAdmin.getMapAdmin().get(keyInt).action();
+            if (remoteControlAdmin.getMapAdmin().containsKey(keyInt)){
+                remoteControlAdmin.getMapAdmin().get(keyInt).action();
             }
         }while (keyInt != isExit);
         scanner.close();

@@ -1,6 +1,7 @@
 package com.lesson.HomeworkEight.CommandForUserMenu;
 
 import com.lesson.HomeworkEight.StrategySearch.AllSearchStrategies;
+import com.lesson.HomeworkEight.StrategySearch.SearchStrategy;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.Scanner;

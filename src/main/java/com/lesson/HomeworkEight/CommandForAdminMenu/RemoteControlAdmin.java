@@ -3,10 +3,10 @@ package com.lesson.HomeworkEight.CommandForAdminMenu;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AllCommandForAdmin {
+public class RemoteControlAdmin {
     private Map<Integer, CommandForAdmin> mapAdmin;
 
-    public AllCommandForAdmin(){
+    public RemoteControlAdmin(){
         this.mapAdmin = new HashMap<>();
         mapAdmin.put(1, new CreateTaxiPark());
         mapAdmin.put(2, new AddCarInTaxoPark());
