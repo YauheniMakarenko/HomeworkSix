@@ -12,8 +12,8 @@ public class Task2 {
 
 
     public void runThreadForTask2() {
-        new Thread(new ProducerRunnable()).start();
-        new Thread(new ConsumerRunnable()).start();
+        new Thread(new ProducerRunnable(queueForTask2)).start();
+        new Thread(new ConsumerRunnable(queueForTask2)).start();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -26,21 +26,33 @@ public class Task2 {
 
     public class ProducerRunnable implements Runnable {
 
+        private QueueForTask2 queue;
+
+        public ProducerRunnable(QueueForTask2 queue) {
+            this.queue = queue;
+        }
+
         @Override
         public void run() {
             int size = random.nextInt(100);
             for (int i = 0; i < size; i++) {
-                queueForTask2.addElement("Закидываем " + (i + 1) + " элемент");
+                queue.addElement("Закидываем " + (i + 1) + " элемент");
             }
         }
     }
 
     public class ConsumerRunnable implements Runnable {
 
+        private QueueForTask2 queue;
+
+        public ConsumerRunnable(QueueForTask2 queue) {
+            this.queue = queue;
+        }
+
         @Override
         public void run() {
-            while (!queueForTask2.getQueue().isEmpty()) {
-                System.out.println(queueForTask2.getQueue().poll());
+            while (!queue.getQueue().isEmpty()) {
+                System.out.println(queue.getQueue().poll());
                 System.out.println("Выгружаем");
             }
         }

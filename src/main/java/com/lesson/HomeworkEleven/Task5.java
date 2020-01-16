@@ -1,13 +1,8 @@
 package com.lesson.HomeworkEleven;
 
-
-import java.math.BigInteger;
-import java.sql.Time;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Task5 {
 
@@ -56,19 +51,21 @@ public class Task5 {
         @Override
         public List<String> call() throws InterruptedException {
 
-            int numberOfQueue = ThreadLocalRandom.current().nextInt(10);
+            Random random = new Random();
+            int numberOfQueue = random.nextInt(10);
 
             while (allQueuesEmp()) {
 
                 if (!listOfQueues.get(numberOfQueue).isEmpty()) {
-                    synchronized (listOfQueues.get(numberOfQueue)) {
+                    synchronized (listOfQueues) {
                         System.out.println(listOfQueues.get(numberOfQueue).element() + " обслужен потоком: " + Thread.currentThread().getId());
                         listResult.add(listOfQueues.get(numberOfQueue).poll());
+                        //TimeUnit.SECONDS.sleep(1);
                     }
                     atomicInteger.getAndIncrement();
                     //TimeUnit.SECONDS.sleep(1);
                 }
-                numberOfQueue = ThreadLocalRandom.current().nextInt(10);
+                numberOfQueue = random.nextInt(10);
             }
             return null;
         }
