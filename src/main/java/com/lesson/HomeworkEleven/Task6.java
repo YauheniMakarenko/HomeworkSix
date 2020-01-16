@@ -22,6 +22,7 @@ public class Task6 {
         public Poker(CyclicBarrier cyclicBarrier) {
             this.cyclicBarrier = cyclicBarrier;
         }
+
         @Override
         public void run() {
             try {

@@ -14,9 +14,10 @@ public class Task3 {
         long before = System.nanoTime();
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Future<List<String>> future = executorService.submit(new ThreadForService(listOfQueues));
-        long after = System.nanoTime();
+
 
         System.out.println("Count of usernames is: " + future.get().size());
+        long after = System.nanoTime();
         System.out.println("Покупателей обслужили за: " + (after - before) + " наносекунд");
 
 

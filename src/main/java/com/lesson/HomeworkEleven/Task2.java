@@ -6,8 +6,9 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Task2 {
-    private Queue<String> queue = new LinkedList<>();
+
     private Random random = new Random();
+    private QueueForTask2 queueForTask2 = new QueueForTask2();
 
 
     public void runThreadForTask2() {
@@ -20,7 +21,7 @@ public class Task2 {
             e.printStackTrace();
         }
 
-        System.out.println("Размер очереди: " + queue.size());
+        System.out.println("Размер очереди: " + queueForTask2.getQueue().size());
     }
 
     public class ProducerRunnable implements Runnable {
@@ -29,7 +30,7 @@ public class Task2 {
         public void run() {
             int size = random.nextInt(100);
             for (int i = 0; i < size; i++) {
-                queue.add("Закидываем " + (i + 1) + " элемент");
+                queueForTask2.addElement("Закидываем " + (i + 1) + " элемент");
             }
         }
     }
@@ -38,11 +39,24 @@ public class Task2 {
 
         @Override
         public void run() {
-            while (!queue.isEmpty()) {
-                System.out.println(queue.poll());
+            while (!queueForTask2.getQueue().isEmpty()) {
+                System.out.println(queueForTask2.getQueue().poll());
                 System.out.println("Выгружаем");
             }
         }
     }
 
+    public class QueueForTask2{
+
+        private Queue<String> queue = new LinkedList<>();
+
+        public Queue<String> addElement(String givenString){
+            queue.add(givenString);
+            return queue;
+        }
+
+        public Queue<String> getQueue() {
+            return queue;
+        }
+    }
 }
