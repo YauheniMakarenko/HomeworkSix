@@ -7,11 +7,10 @@ public class Task5 {
 
 
     public static void runThreadsForTask5() throws InterruptedException, ExecutionException {
-        List<ConcurrentLinkedQueue<String>> listOfQueues = new ArrayList<>();
+        List<Queue<String>> listOfQueues = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             listOfQueues.add(generateQueue(i + 1));
         }
-
 
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         List<ThreadForService> listThread = new ArrayList();
@@ -20,12 +19,13 @@ public class Task5 {
         }
         long before = System.currentTimeMillis();
         List<Future<List<String>>> listResult = executorService.invokeAll(listThread);
+
         executorService.shutdown();
+
         int count = 0;
         for (int i = 0; i < listResult.size(); i++) {
             count += listResult.get(i).get().size();
         }
-
 
         System.out.println("Количество юзеров: " + count);
         long after = System.currentTimeMillis();
@@ -33,8 +33,8 @@ public class Task5 {
 
     }
 
-    private static ConcurrentLinkedQueue<String> generateQueue(int numberOfQueue) {
-        ConcurrentLinkedQueue<String> queue = new ConcurrentLinkedQueue<>();
+    private static Queue<String> generateQueue(int numberOfQueue) {
+        Queue<String> queue = new ConcurrentLinkedQueue<>();
         for (int i = 0; i < 100_000; i++) {
             queue.add("человек $username: " + (i + 1) + ", номер очереди: " + numberOfQueue);
         }
@@ -43,11 +43,11 @@ public class Task5 {
 
     public static class ThreadForService implements Callable<List<String>> {
 
-        private List<ConcurrentLinkedQueue<String>> listOfQueues;
-        List<String> listResult = Collections.synchronizedList(new ArrayList<>());
+        private List<Queue<String>> listOfQueues;
+        private List<String> listResult = new ArrayList<>();
 
 
-        public ThreadForService(List<ConcurrentLinkedQueue<String>> listOfQueues) {
+        public ThreadForService(List<Queue<String>> listOfQueues) {
             this.listOfQueues = listOfQueues;
         }
 
@@ -56,7 +56,7 @@ public class Task5 {
 
             int numberOfQueue;
 
-            while (allQueuesEmp()) {
+            while (!allQueuesEmp()) {
 
                 numberOfQueue = ThreadLocalRandom.current().nextInt(10);
 
@@ -71,12 +71,12 @@ public class Task5 {
         }
 
         private boolean allQueuesEmp() {
-            for (Queue<String> hhh : listOfQueues) {
-                if (!hhh.isEmpty()) {
-                    return true;
+            for (Queue<String> queue : listOfQueues) {
+                if (!queue.isEmpty()) {
+                    return false;
                 }
             }
-            return false;
+            return true;
 
         }
     }
