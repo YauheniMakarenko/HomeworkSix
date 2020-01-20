@@ -8,12 +8,12 @@ import java.util.concurrent.TimeUnit;
 public class Task2 {
 
     private Random random = new Random();
-    private QueueForTask2 queueForTask2 = new QueueForTask2();
+    private Queue<String> queue = new LinkedList<>();
 
 
     public void runThreadForTask2() {
-        new Thread(new ProducerRunnable(queueForTask2)).start();
-        new Thread(new ConsumerRunnable(queueForTask2)).start();
+        new Thread(new ProducerRunnable()).start();
+        new Thread(new ConsumerRunnable()).start();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -21,54 +21,28 @@ public class Task2 {
             e.printStackTrace();
         }
 
-        System.out.println("Размер очереди: " + queueForTask2.getQueue().size());
+        System.out.println("Размер очереди: " + queue.size());
     }
 
     public class ProducerRunnable implements Runnable {
-
-        private QueueForTask2 queue;
-
-        public ProducerRunnable(QueueForTask2 queue) {
-            this.queue = queue;
-        }
 
         @Override
         public void run() {
             int size = random.nextInt(100);
             for (int i = 0; i < size; i++) {
-                queue.addElement("Закидываем " + (i + 1) + " элемент");
+                queue.add("Закидываем " + (i + 1) + " элемент");
             }
         }
     }
 
     public class ConsumerRunnable implements Runnable {
 
-        private QueueForTask2 queue;
-
-        public ConsumerRunnable(QueueForTask2 queue) {
-            this.queue = queue;
-        }
-
         @Override
         public void run() {
-            while (!queue.getQueue().isEmpty()) {
-                System.out.println(queue.getQueue().poll());
+            while (!queue.isEmpty()) {
+                System.out.println(queue.poll());
                 System.out.println("Выгружаем");
             }
-        }
-    }
-
-    public class QueueForTask2{
-
-        private Queue<String> queue = new LinkedList<>();
-
-        public Queue<String> addElement(String givenString){
-            queue.add(givenString);
-            return queue;
-        }
-
-        public Queue<String> getQueue() {
-            return queue;
         }
     }
 }

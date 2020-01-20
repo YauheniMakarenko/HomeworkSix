@@ -1,11 +1,12 @@
 package com.lesson.HomeworkEight.CommandForUserMenu;
 
 import com.lesson.HomeworkEight.Car;
-import com.lesson.HomeworkEight.SortStrategy.AllSortStrategy;
+import com.lesson.HomeworkEight.SortStrategy.SortCommand;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ActionForUserTopCars implements CommandForUser {
@@ -20,37 +21,33 @@ public class ActionForUserTopCars implements CommandForUser {
     @Override
     public void action() {
         Scanner scanner = new Scanner(System.in);
-        AllSortStrategy allSortStrategy = new AllSortStrategy();
         System.out.println("Выберите критерий!");
         printTopMenu();
         int keyInt;
         String keyString = scanner.next();
-        while (!validatorForMenu.validate(keyString)){
+        while (!validatorForMenu.validate(keyString)) {
             System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
             keyString = scanner.next();
         }
         keyInt = Integer.parseInt(keyString);
-        try{
-            if (allSortStrategy.getMapSort().containsKey(keyInt)){
-                List<Map.Entry<Car, Integer>> list = allSortStrategy.getMapSort().get(keyInt).sortTop();
-                System.out.println("Введите количество машин для вывода");
-                String keyStringCom = scanner.next();
-                while (!validatorForMenu.validate(keyStringCom)){
-                    System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-                    System.out.println("Введите количество машин для вывода: ");
-                    keyStringCom = scanner.next();
-                }
-                int key = Integer.parseInt(keyStringCom);
-                if (key > list.size()){
-                    key = list.size();
-                }
-                for (int i = 0; i < key; i++) {
-                    System.out.println(list.get(i));
-                }
+        try {
+            List<Map.Entry<Car, Integer>> list = SortCommand.findCommand(keyInt).sortTop();
+            System.out.println("Введите количество машин для вывода");
+            String keyStringCom = scanner.next();
+            while (!validatorForMenu.validate(keyStringCom)) {
+                System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
+                System.out.println("Введите количество машин для вывода: ");
+                keyStringCom = scanner.next();
             }
-        }catch (IndexOutOfBoundsException e){
-            e.getMessage();
-            System.out.println("Такспопарк не создан!");
+            int key = Integer.parseInt(keyStringCom);
+            if (key > list.size()) {
+                key = list.size();
+            }
+            for (int i = 0; i < key; i++) {
+                System.out.println(list.get(i));
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Вы ввели некорректный пункт меню");
         }
     }
 }

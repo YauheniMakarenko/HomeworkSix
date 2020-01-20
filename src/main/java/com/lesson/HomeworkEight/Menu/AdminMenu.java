@@ -1,8 +1,9 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.CommandForAdminMenu.RemoteControlAdmin;
+import com.lesson.HomeworkEight.CommandForAdminMenu.Remote_Control_Admin;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class AdminMenu {
@@ -20,24 +21,25 @@ public class AdminMenu {
         System.out.println("6. Выход из приложения");
     }
 
-    public void adminStart(){
+    public void adminStart() {
         Scanner scanner = new Scanner(System.in);
-        RemoteControlAdmin remoteControlAdmin = new RemoteControlAdmin();
         String keyString;
         int keyInt;
         do {
             printMainMenu();
             System.out.print("Введите номер меню: ");
             keyString = scanner.next();
-            while (!validatorForMenu.validate(keyString)){
+            while (!validatorForMenu.validate(keyString)) {
                 System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
                 keyString = scanner.next();
             }
             keyInt = Integer.parseInt(keyString);
-            if (remoteControlAdmin.getMapAdmin().containsKey(keyInt)){
-                remoteControlAdmin.getMapAdmin().get(keyInt).action();
+            try {
+                Remote_Control_Admin.findCommand(keyInt).action();
+            } catch (NoSuchElementException e) {
+                System.out.println("Вы ввели некорректный пункт меню");
             }
-        }while (keyInt != isExit);
+        } while (keyInt != isExit);
         scanner.close();
     }
 
