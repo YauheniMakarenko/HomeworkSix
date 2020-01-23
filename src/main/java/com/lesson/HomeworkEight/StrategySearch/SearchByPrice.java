@@ -10,7 +10,8 @@ import java.util.Map;
 
 public class SearchByPrice implements SearchStrategy {
 
-    private String reader() {
+    @Override
+    public String reader() {
         String string = "";
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
