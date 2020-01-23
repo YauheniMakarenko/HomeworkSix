@@ -1,0 +1,7 @@
+Car{producer=RENAULT, model='Logan', carСlass=B, bodyType=SEDAN, typeOfDrive=FRONT, price=9200, year=2004, maxSpeed=175, fuelConsumption=7.9} = Client{name='DATT', address='DATT'}
+Car{producer=HYUNDAI, model='Solaris', carСlass=B, bodyType=SEDAN, typeOfDrive=FULL, price=4500, year=2017, maxSpeed=190, fuelConsumption=5.7} = Client{name='DATT', address='DATT'}
+Car{producer=NISSAN, model='gt-r', carСlass=S, bodyType=RODSTER, typeOfDrive=FULL, price=12000, year=1995, maxSpeed=300, fuelConsumption=7.7} = Client{name='DATT', address='DATT'}
+Car{producer=NISSAN, model='gt-r', carСlass=S, bodyType=RODSTER, typeOfDrive=FULL, price=12050, year=1995, maxSpeed=300, fuelConsumption=7.7} = Client{name='DATT', address='DATT'}
+Car{producer=SKODA, model='Octavia', carСlass=C, bodyType=HATCHBACK, typeOfDrive=FULL, price=35000, year=2019, maxSpeed=230, fuelConsumption=5.0} = Client{name='DATT', address='DATT'}
+Car{producer=FORD, model='Focus', carСlass=C, bodyType=SEDAN, typeOfDrive=FRONT, price=9200, year=2011, maxSpeed=195, fuelConsumption=8.3} = Client{name='DATT', address='DATT'}
+Car{producer=MERCEDESBENZ, model='AMG-G63', carСlass=J, bodyType=SUV, typeOfDrive=FULL, price=120000, year=2019, maxSpeed=250, fuelConsumption=13.0} = Client{name='DATT', address='DATT'}

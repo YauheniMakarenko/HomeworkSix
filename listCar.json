@@ -1,0 +1,134 @@
+[
+  {
+    "producer": "NISSAN",
+    "model": "GT-R",
+    "CarClass": "S",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "REAR",
+    "price": 32000,
+    "year": 1995,
+    "maxSpeed": 300,
+    "fuelConsumption": 20.0
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "CLS-63-AMG",
+    "CarClass": "D",
+    "bodyType": "COUPE",
+    "typeOfDrive": "FULL",
+    "price": 110000,
+    "year": 2019,
+    "maxSpeed": 250,
+    "fuelConsumption": 15.0
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "AMG-G63",
+    "CarClass": "J",
+    "bodyType": "SUV",
+    "typeOfDrive": "FULL",
+    "price": 120000,
+    "year": 2019,
+    "maxSpeed": 250,
+    "fuelConsumption": 13.0
+  },
+  {
+    "producer": "MERCEDESBENZ",
+    "model": "Maybach-S-650-Guard",
+    "CarClass": "F",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FULL",
+    "price": 1000000,
+    "year": 2019,
+    "maxSpeed": 190,
+    "fuelConsumption": 8.7
+  },
+  {
+    "producer": "HYUNDAI",
+    "model": "Solaris",
+    "CarClass": "B",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FULL",
+    "price": 4500,
+    "year": 2017,
+    "maxSpeed": 190,
+    "fuelConsumption": 5.7
+  },
+  {
+    "producer": "HYUNDAI",
+    "model": "Solaris",
+    "CarClass": "B",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FULL",
+    "price": 4500,
+    "year": 2017,
+    "maxSpeed": 190,
+    "fuelConsumption": 5.7
+  },
+  {
+    "producer": "KIA",
+    "model": "Rio",
+    "CarClass": "B",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FRONT",
+    "price": 11000,
+    "year": 2017,
+    "maxSpeed": 190,
+    "fuelConsumption": 3.8
+  },
+  {
+    "producer": "SKODA",
+    "model": "Rapid",
+    "CarClass": "C",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FRONT",
+    "price": 12500,
+    "year": 2012,
+    "maxSpeed": 190,
+    "fuelConsumption": 5.6
+  },
+  {
+    "producer": "RENAULT",
+    "model": "Logan",
+    "CarClass": "B",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FRONT",
+    "price": 9200,
+    "year": 2004,
+    "maxSpeed": 175,
+    "fuelConsumption": 7.9
+  },
+  {
+    "producer": "FORD",
+    "model": "Focus",
+    "CarClass": "C",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FRONT",
+    "price": 9200,
+    "year": 2011,
+    "maxSpeed": 195,
+    "fuelConsumption": 8.3
+  },
+  {
+    "producer": "TOYOTA",
+    "model": "Camry",
+    "CarClass": "E",
+    "bodyType": "SEDAN",
+    "typeOfDrive": "FULL",
+    "price": 18000,
+    "year": 2016,
+    "maxSpeed": 210,
+    "fuelConsumption": 9.7
+  },
+  {
+    "producer": "SKODA",
+    "model": "Octavia",
+    "CarClass": "C",
+    "bodyType": "HATCHBACK",
+    "typeOfDrive": "FULL",
+    "price": 35000,
+    "year": 2019,
+    "maxSpeed": 230,
+    "fuelConsumption": 5.0
+  }
+]
