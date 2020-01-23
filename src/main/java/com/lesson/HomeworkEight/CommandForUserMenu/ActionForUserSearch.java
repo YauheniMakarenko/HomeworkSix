@@ -2,12 +2,13 @@ package com.lesson.HomeworkEight.CommandForUserMenu;
 
 import com.lesson.HomeworkEight.StrategySearch.SearchCommand;
 import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkEight.Validators.IConsoleInputReader;
 
 import java.util.NoSuchElementException;
 
 public class ActionForUserSearch implements CommandForUser {
 
-    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
+    private IConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     private void printSearchMenu() {
         System.out.println("1. По цене");

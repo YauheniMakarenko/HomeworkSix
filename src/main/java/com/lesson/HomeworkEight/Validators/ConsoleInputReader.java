@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class ConsoleInputReader implements IConsoleInputReader {
 
-    private Scanner scanner;
+    private Scanner scanner = new Scanner(System.in);
     private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
 
     @Override
     public int checkTheMenuNumber(){
-        scanner = new Scanner(System.in);
         String keyString = scanner.next();
         int keyInt;
         while (!validatorForMenu.validate(keyString)) {
@@ -22,7 +21,6 @@ public class ConsoleInputReader implements IConsoleInputReader {
 
     @Override
     public String checkTheRole(){
-        scanner = new Scanner(System.in);
         String role = scanner.next();
         while (!role.equals("admin") && !role.equals("user")){
             System.out.println("Введите корректно роль (admin/user)");

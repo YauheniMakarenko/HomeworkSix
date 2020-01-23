@@ -5,6 +5,8 @@ import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
+import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkEight.Validators.IConsoleInputReader;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.regex.Pattern;
 
 public class AddCarInTaxoPark implements CommandForAdmin {
 
+    private IConsoleInputReader consoleInputReader = new ConsoleInputReader();
     private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
     private Scanner scanner = new Scanner(System.in);
 
@@ -46,29 +49,11 @@ public class AddCarInTaxoPark implements CommandForAdmin {
 
     private List<Integer> getIntValue() {
         System.out.println("Введите цену: ");
-        String priceString = scanner.next();
-        while (!validatorForMenu.validate(priceString)) {
-            System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-            System.out.println("Введите цену: ");
-            priceString = scanner.next();
-        }
-        int price = Integer.parseInt(priceString);
+        int price = consoleInputReader.checkTheMenuNumber();
         System.out.println("Введите год выпуска: ");
-        String yearString = scanner.next();
-        while (!validatorForMenu.validate(yearString)) {
-            System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-            System.out.println("Введите год выпуска: ");
-            yearString = scanner.next();
-        }
-        int year = Integer.parseInt(yearString);
+        int year = consoleInputReader.checkTheMenuNumber();
         System.out.println("Введите максимальную скорость: ");
-        String maxSpeedString = scanner.next();
-        while (!validatorForMenu.validate(maxSpeedString)) {
-            System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-            System.out.println("Введите максимальную скорость: ");
-            maxSpeedString = scanner.next();
-        }
-        int maxSpeed = Integer.parseInt(maxSpeedString);
+        int maxSpeed = consoleInputReader.checkTheMenuNumber();
         List<Integer> list = Arrays.asList(price, year, maxSpeed);
         return list;
     }

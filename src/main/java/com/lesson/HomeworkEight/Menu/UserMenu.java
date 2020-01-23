@@ -2,12 +2,13 @@ package com.lesson.HomeworkEight.Menu;
 
 import com.lesson.HomeworkEight.CommandForUserMenu.RemoteControlUser;
 import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkEight.Validators.IConsoleInputReader;
 
 import java.util.*;
 
 public class UserMenu {
 
-    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
+    private IConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     public final int isExit = 5;
 

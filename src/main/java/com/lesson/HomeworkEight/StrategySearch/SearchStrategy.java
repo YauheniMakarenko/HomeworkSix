@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public interface SearchStrategy {
     void search();
 
-    default String reader() {
+    default String readValue() {
         String string = "";
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -16,5 +16,6 @@ public interface SearchStrategy {
             e.printStackTrace();
         }
         return string;
+
     }
 }

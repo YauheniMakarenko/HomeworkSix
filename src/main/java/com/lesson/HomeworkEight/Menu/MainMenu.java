@@ -3,13 +3,14 @@ package com.lesson.HomeworkEight.Menu;
 import com.lesson.HomeworkEight.File.ReadJSON;
 import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
 import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkEight.Validators.IConsoleInputReader;
 import com.lesson.HomeworkSeven.Check;
 
 import java.util.Scanner;
 
 public class MainMenu {
 
-    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
+    private IConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     public void start(){
         /*ReadJSON productFileReadJSON = new ReadJSON();

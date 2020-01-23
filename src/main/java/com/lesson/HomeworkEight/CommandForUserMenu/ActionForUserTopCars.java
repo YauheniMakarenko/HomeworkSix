@@ -3,6 +3,7 @@ package com.lesson.HomeworkEight.CommandForUserMenu;
 import com.lesson.HomeworkEight.Car;
 import com.lesson.HomeworkEight.SortStrategy.SortCommand;
 import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkEight.Validators.IConsoleInputReader;
 
 import java.util.List;
 import java.util.Map;
@@ -10,7 +11,7 @@ import java.util.NoSuchElementException;
 
 public class ActionForUserTopCars implements CommandForUser {
 
-    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
+    private IConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     private void printTopMenu() {
         System.out.println("1. По цене");

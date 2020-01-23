@@ -2,13 +2,14 @@ package com.lesson.HomeworkEight.Menu;
 
 import com.lesson.HomeworkEight.CommandForAdminMenu.RemoteControlAdmin;
 import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkEight.Validators.IConsoleInputReader;
 
 import java.util.NoSuchElementException;
 
 public class AdminMenu {
 
     private final int isExit = 6;
-    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
+    private IConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     private void printMainMenu() {
         System.out.println();
