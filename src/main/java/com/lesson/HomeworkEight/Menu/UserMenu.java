@@ -1,12 +1,14 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.CommandForUserMenu.Remote_Control_User;
+import com.lesson.HomeworkEight.CommandForUserMenu.RemoteControlUser;
+import com.lesson.HomeworkEight.Validators.Check;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
 
 public class UserMenu {
-    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
+
+    private Check check = new Check();
 
     public final int isExit = 5;
 
@@ -20,21 +22,14 @@ public class UserMenu {
     }
 
     public void start() {
-        Scanner scanner = new Scanner(System.in);
-        String keyString;
         int keyInt;
         try {
             do {
                 printMainMenu();
                 System.out.print("Введите номер меню: ");
-                keyString = scanner.next();
-                while (!validatorForMenu.validate(keyString)) {
-                    System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-                    keyString = scanner.next();
-                }
-                keyInt = Integer.parseInt(keyString);
+                keyInt = check.checkTheMenuNumber();
                 try {
-                    Remote_Control_User.findCommand(keyInt).action();
+                    RemoteControlUser.findCommand(keyInt).action();
                 } catch (NoSuchElementException e) {
                     System.out.println("Вы ввели некорректный пункт меню");
                 }

@@ -1,7 +1,7 @@
 package com.lesson.HomeworkEight.Menu;
 
-import com.lesson.HomeworkEight.CommandForAdminMenu.Remote_Control_Admin;
-import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
+import com.lesson.HomeworkEight.CommandForAdminMenu.RemoteControlAdmin;
+import com.lesson.HomeworkEight.Validators.Check;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class AdminMenu {
 
     private final int isExit = 6;
-    ValidatorForMenu validatorForMenu = new ValidatorForMenu();
+    private Check check = new Check();
 
     private void printMainMenu() {
         System.out.println();
@@ -22,25 +22,17 @@ public class AdminMenu {
     }
 
     public void adminStart() {
-        Scanner scanner = new Scanner(System.in);
-        String keyString;
         int keyInt;
         do {
             printMainMenu();
             System.out.print("Введите номер меню: ");
-            keyString = scanner.next();
-            while (!validatorForMenu.validate(keyString)) {
-                System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-                keyString = scanner.next();
-            }
-            keyInt = Integer.parseInt(keyString);
+            keyInt = check.checkTheMenuNumber();
             try {
-                Remote_Control_Admin.findCommand(keyInt).action();
+                RemoteControlAdmin.findCommand(keyInt).action();
             } catch (NoSuchElementException e) {
                 System.out.println("Вы ввели некорректный пункт меню");
             }
         } while (keyInt != isExit);
-        scanner.close();
     }
 
 }

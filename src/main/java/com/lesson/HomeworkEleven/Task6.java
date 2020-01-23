@@ -1,6 +1,5 @@
 package com.lesson.HomeworkEleven;
 
-import java.util.List;
 import java.util.concurrent.*;
 
 public class Task6 {

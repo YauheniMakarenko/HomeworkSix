@@ -53,12 +53,12 @@ public class Task5 {
 
         @Override
         public List<String> call() throws InterruptedException {
-
+            Random random = new Random();
             int numberOfQueue;
 
             while (!allQueuesEmp()) {
 
-                numberOfQueue = ThreadLocalRandom.current().nextInt(10);
+                numberOfQueue = random.nextInt(10);
 
                 String poll = listOfQueues.get(numberOfQueue).poll();
                 if (poll != null) {

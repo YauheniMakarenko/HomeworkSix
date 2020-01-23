@@ -12,7 +12,6 @@ public class CsvFile {
         try(FileWriter fileWriter = new FileWriter("Orders.csv", true)) {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.append( car + " = " + client  + "\n");
-            bufferedWriter.close();
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

@@ -6,6 +6,7 @@ import com.lesson.HomeworkEight.Enum.BodyType;
 import com.lesson.HomeworkEight.Enum.CarClass;
 import com.lesson.HomeworkEight.Enum.TypeOfDrive;
 import com.lesson.HomeworkEight.File.CsvFile;
+import com.lesson.HomeworkEight.Validators.Check;
 import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
 
 import java.util.*;
@@ -19,6 +20,7 @@ public class TaxiPark implements ITaxiPark {
     private ValidatorForMenu validatorForMenu = new ValidatorForMenu();
     private CsvFile csvFile = new CsvFile();
     private static TaxiPark instance;
+    private Check check = new Check();
 
 
     private TaxiPark() {
@@ -97,12 +99,7 @@ public class TaxiPark implements ITaxiPark {
         List<Car> listCarString = createListCar();
         System.out.println("Выберите автомобиль цифрой:");
         int keyInt;
-        String keyString = scanner.next();
-        while (!validatorForMenu.validate(keyString)) {
-            System.out.println("Вы ввели некорректное значение! Попробуйте снова используя цифры: ");
-            keyString = scanner.next();
-        }
-        keyInt = Integer.parseInt(keyString);
+        keyInt = check.checkTheMenuNumber();
         for (int i = 0; i < listCarString.size(); i++) {
             if (keyInt == i) {
                 System.out.println("Введите ваше имя:");
