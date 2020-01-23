@@ -1,15 +1,14 @@
 package com.lesson.HomeworkEight.Menu;
 
 import com.lesson.HomeworkEight.CommandForAdminMenu.RemoteControlAdmin;
-import com.lesson.HomeworkEight.Validators.Check;
+import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
 
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 public class AdminMenu {
 
     private final int isExit = 6;
-    private Check check = new Check();
+    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     private void printMainMenu() {
         System.out.println();
@@ -26,7 +25,7 @@ public class AdminMenu {
         do {
             printMainMenu();
             System.out.print("Введите номер меню: ");
-            keyInt = check.checkTheMenuNumber();
+            keyInt = consoleInputReader.checkTheMenuNumber();
             try {
                 RemoteControlAdmin.findCommand(keyInt).action();
             } catch (NoSuchElementException e) {

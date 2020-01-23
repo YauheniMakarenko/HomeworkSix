@@ -11,18 +11,6 @@ import java.util.Map;
 public class SearchByPrice implements SearchStrategy {
 
     @Override
-    public String reader() {
-        String string = "";
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            string = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return string;
-    }
-
-    @Override
     public void search() {
         TaxiPark taxiPark = TaxiPark.getInstance();
         try {

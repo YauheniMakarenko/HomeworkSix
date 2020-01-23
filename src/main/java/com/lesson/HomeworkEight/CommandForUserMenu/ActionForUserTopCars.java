@@ -2,17 +2,15 @@ package com.lesson.HomeworkEight.CommandForUserMenu;
 
 import com.lesson.HomeworkEight.Car;
 import com.lesson.HomeworkEight.SortStrategy.SortCommand;
-import com.lesson.HomeworkEight.Validators.Check;
-import com.lesson.HomeworkEight.Validators.ValidatorForMenu;
+import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
 
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 public class ActionForUserTopCars implements CommandForUser {
 
-    private Check check = new Check();
+    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     private void printTopMenu() {
         System.out.println("1. По цене");
@@ -23,11 +21,11 @@ public class ActionForUserTopCars implements CommandForUser {
     public void action() {
         System.out.println("Выберите критерий!");
         printTopMenu();
-        int keyInt = check.checkTheMenuNumber();
+        int keyInt = consoleInputReader.checkTheMenuNumber();
         try {
             List<Map.Entry<Car, Integer>> list = SortCommand.findCommand(keyInt).sortTop();
             System.out.println("Введите количество машин для вывода");
-            int key = check.checkTheMenuNumber();
+            int key = consoleInputReader.checkTheMenuNumber();
             if (key > list.size()) {
                 key = list.size();
             }

@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class CheckTest {
+public class ConsoleInputReaderTest {
     private Product product1;
     private Product product2;
     private Product product3;

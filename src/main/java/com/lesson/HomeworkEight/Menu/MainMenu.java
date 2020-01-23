@@ -2,10 +2,14 @@ package com.lesson.HomeworkEight.Menu;
 
 import com.lesson.HomeworkEight.File.ReadJSON;
 import com.lesson.HomeworkEight.TaxiPark.TaxiPark;
+import com.lesson.HomeworkEight.Validators.ConsoleInputReader;
+import com.lesson.HomeworkSeven.Check;
 
 import java.util.Scanner;
 
 public class MainMenu {
+
+    private ConsoleInputReader consoleInputReader = new ConsoleInputReader();
 
     public void start(){
         /*ReadJSON productFileReadJSON = new ReadJSON();
@@ -15,12 +19,7 @@ public class MainMenu {
     }
 
     private void choiceRoll(){
-        Scanner scanner = new Scanner(System.in);
-        String role = scanner.next();
-        while (!role.equals("admin") && !role.equals("user")){
-            System.out.println("Введите корректно роль (admin/user)");
-            role = scanner.next();
-        }
+        String role = consoleInputReader.checkTheRole();
         if (role.equals("admin")){
             System.out.println("Привет, admin!");
             new AdminMenu().adminStart();
@@ -29,6 +28,5 @@ public class MainMenu {
             System.out.println("Привет, user!");
             new UserMenu().start();
         }
-        scanner.close();
     }
 }
